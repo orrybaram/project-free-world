@@ -27,14 +27,14 @@ $(document).ready(function(){
   GeoMap.geo_boundaries.fetch();
   GeoMap.geo_boundaries.on('reset', function(){
     var boundaries = [];
-    multipolygon = false;
     GeoMap.geo_boundaries.each(function(country){
-      boundaries.push(country.get('coordinates'));
-      if(country.get('type') === 'MultiPolygon'){
-        multipolygon = true;
-      }
+      boundaries.push({country: country.get('country'), coordinates: country.get('coordinates'), type: country.get('type')});
     });
     _.each(boundaries, function(boundary){ 
+      if(boundary['type'] === 'MultiPolygon'){
+        multipolygon = true;
+      }
+      boundary = boundary['coordinates'];
       if(multipolygon == true){
         var coordinates = []
         _.each(boundary, function(bound){
@@ -52,8 +52,6 @@ $(document).ready(function(){
         GeoMap.plots_points(coordinates);
       }
     });
-
-
   });
   GeoMap.plot_points = function(points){
     testBoundary = new google.maps.Polygon({
