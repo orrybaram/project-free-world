@@ -2763,6 +2763,17 @@ header #logo {
   border-top: 1px solid white;
   border-bottom: 1px solid #CECECE;
 }
+.sidebar ul li:hover {
+  background-color: rgba(223, 232, 222, 0.764);
+  background-image: -moz-linear-gradient(top, rgba(218, 236, 217, 0.7), rgba(228, 228, 228, 0.86));
+  background-image: -ms-linear-gradient(top, rgba(218, 236, 217, 0.7), rgba(228, 228, 228, 0.86));
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(218, 236, 217, 0.7)), to(rgba(228, 228, 228, 0.86)));
+  background-image: -webkit-linear-gradient(top, rgba(218, 236, 217, 0.7), rgba(228, 228, 228, 0.86));
+  background-image: -o-linear-gradient(top, rgba(218, 236, 217, 0.7), rgba(228, 228, 228, 0.86));
+  background-image: linear-gradient(top, rgba(218, 236, 217, 0.7), rgba(228, 228, 228, 0.86));
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='rgba(218, 236, 217, 0.7)', endColorstr='rgba(228, 228, 228, 0.86)', GradientType=0);
+}
 .map {
   height: 100%;
 }
