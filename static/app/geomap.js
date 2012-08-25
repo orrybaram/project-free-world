@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  mapOptions = {zoom: 5, center: new google.maps.LatLng(-34.397, 150.644), mapTypeId: google.maps.MapTypeId.TERRAIN};
+  mapOptions = {zoom: 1, center: new google.maps.LatLng(0,0), mapTypeId: google.maps.MapTypeId.TERRAIN};
   var map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
 });
 
