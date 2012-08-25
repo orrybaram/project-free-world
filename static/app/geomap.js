@@ -13,7 +13,7 @@ if(typeof GeoMap === 'undefined' || GeoMap === null){
     model: GeoData,
     url: "/natindex"   
   });
-  GeoMap.geo_data = new GeoMap.GeoDataCollection();
+  GeoMap.geo_data = new GeoDataCollection();
 
   var GeoCoordinates= Backbone.Model.extend({});
   var GeoCoordinatesCollection = Backbone.Collection.extend({
@@ -21,5 +21,5 @@ if(typeof GeoMap === 'undefined' || GeoMap === null){
     url: "/static/json/country_boundaries.json"
   });
 
-  GeoMap.geo_boundaries = new GeoMap.GeoCoordinatesCollection();
+  GeoMap.geo_boundaries = new GeoCoordinatesCollection();
 })();
