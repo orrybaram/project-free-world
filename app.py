@@ -43,7 +43,8 @@ def natindex():
     country_info['Human Rights Index'] = values[4]
     country_info['Government Legitmacy'] = values[5]
     country_info['Literacy Rate'] = values[6]
-    values_array.append({country:country_info})
+    values_array.append({country:country_info}) 
+  print values_array
   return jsonify(values_array)
 
 if __name__ == '__main__':
