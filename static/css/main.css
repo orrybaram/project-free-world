@@ -2711,10 +2711,19 @@ header {
   z-index: 2;
 }
 header #logo {
-  font-size: 20px;
-  line-height: 22px;
-  font-weight: 300;
+  padding-top: 5px;
+  padding-left: 5px;
   text-shadow: 0 1px white;
+}
+header #logo #logo-title {
+  font-size: 32px;
+  line-height: 30px;
+  font-weight: 300;
+}
+header #logo #logo-tagline {
+  font-size: 13px;
+  line-height: 25px;
+  text-transform: uppercase;
 }
 #sub-header {
   padding: 5px 20px 2px;
