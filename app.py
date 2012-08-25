@@ -30,7 +30,21 @@ def index():
 
 @app.route('/natindex')
 def natindex():
-    return jsonify(Natindex.query.all())
+  nat_index_array = Natindex.query.all()
+  values_array = []
+  for nat in nat_index_array:
+    country_info = {}
+    country = nat_index.country  
+    values = nat_index.values.split(':')
+    country_info['continent'] = value[0]
+    country_info['Poverty Alleviation'] = value[1]
+    country_info['Economic Equality'] = value[2]
+    country_info['Infrastructure Index'] = value[3]
+    country_info['Human Rights Index'] = value[4]
+    country_info['Government Legitmacy'] = value[5]
+    country_info['Literacy Rate'] = value[6]
+    values_array.push({country:country_info})
+  return jsonify(values_array)
 
 if __name__ == '__main__':
     # Bind to PORT if defined, otherwise default to 5000.
