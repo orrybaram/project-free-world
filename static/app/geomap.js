@@ -24,6 +24,9 @@ $(document).ready(function(){
   });
 
   GeoMap.geo_boundaries = new GeoCoordinatesCollection();
+  GeoMap.on('reset', function(){
+    alert('foobar');
+  })
   GeoMap.geo_boundaries.fetch();
   var boundaries = GeoMap.geo_boundaries.first().get('boundaries');
   
