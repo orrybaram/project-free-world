@@ -1,6 +1,9 @@
 import os
 from flask import Flask, render_template
 from flask.ext.sqlalchemy import SQLAlchemy
+import logging
+
+logging.basicConfig(level=logging.DEBUG)
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
