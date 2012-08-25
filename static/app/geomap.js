@@ -27,24 +27,42 @@ $(document).ready(function(){
   GeoMap.geo_boundaries.fetch();
   GeoMap.geo_boundaries.on('reset', function(){
     var boundaries = [];
+    multipolygon = false;
     GeoMap.geo_boundaries.each(function(country){
-      boundaries.push(country.get('boundaries'));
+      boundaries.push(country.get('coordinates'));
+      if(country.get('type') === 'MultiPolygon'){
+        multipolygon = true;
+      }
     });
     _.each(boundaries, function(boundary){ 
-      var coordinates = []
-      _.each(boundary, function(value){
-        coordinates.push(new google.maps.LatLng(value[1],value[0]));
-      });
-
-      testBoundary = new google.maps.Polygon({
-        paths: coordinates,
-        strokeColor : "#FF0000",
-        strokeOpacity: 0.8,
-        strokeWeight: 1,
-        fillColor: "#FF0000",
-        fillOpacity: 0.35
-      });
-      testBoundary.setMap(GeoMap.map);
+      if(multipolygon == true){
+        var coordinates = []
+        _.each(boundary, function(bound){
+            _.each(bound, function(b){
+              coordinates.push(new google.maps.LatLng(b[1],b[0]));
+            });
+            GeoMap.plot_points(coordinates);
+        });
+      else{
+        var coordinates = []
+        _.each(boundary, function(bound){
+          coordinates.push(new google.maps.LatLng(value[1],value[0]));
+        });
+        GeoMap.plots_points(coordinates);
+      }
     });
+
+
   });
+  GeoMap.plot_points = function(points){
+    testBoundary = new google.maps.Polygon({
+      paths: coordinates,
+      strokeColor : "#FF0000",
+      strokeOpacity: 0.8,
+      strokeWeight: 1,
+      fillColor: "#FF0000",
+      fillOpacity: 0.35
+    });
+    testBoundary.setMap(GeoMap.map);
+  }
 })();
