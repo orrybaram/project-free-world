@@ -2720,6 +2720,9 @@ header #logo #logo-title {
   line-height: 30px;
   font-weight: 300;
 }
+header #logo #logo-title:hover {
+  color: blue;
+}
 header #logo #logo-tagline {
   font-size: 13px;
   line-height: 25px;
@@ -2736,8 +2739,22 @@ header #logo #logo-tagline {
   position: relative;
   z-index: 1;
 }
+#sub-header #page-desc {
+  font-size: 16px;
+  padding: 10px;
+  font-weight: lighter;
+}
 #sub-header .btn-toolbar {
   margin: 0;
+}
+#sub-header .btn-toolbar .btn-group {
+  width: 100%;
+}
+#sub-header .btn-toolbar .btn-group .btn {
+  width: 15%;
+  line-height: 24px;
+  font-size: 12px;
+  text-transform: uppercase;
 }
 .container-fluid {
   height: 100%;
@@ -2771,6 +2788,13 @@ header #logo #logo-tagline {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='rgba(252, 252, 252, 0.7)', endColorstr='rgba(228, 228, 228, 0.86)', GradientType=0);
   border-top: 1px solid white;
   border-bottom: 1px solid #CECECE;
+}
+.sidebar ul li .action-title {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.sidebar ul li .action-desc {
+  padding-top: 2px;
 }
 .sidebar ul li:hover {
   background-color: rgba(223, 232, 222, 0.764);

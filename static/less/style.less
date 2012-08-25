@@ -18,11 +18,17 @@ header {
 		padding-top: 5px;
 		padding-left: 5px;
 		text-shadow: 0 1px white; 
+		
 		#logo-title {
 			font-size: 32px;
 			line-height: 30px;
 			font-weight: 300;
+			
+			&:hover {
+				color: blue;
+			}
 		}
+
 		#logo-tagline {
 			font-size: 13px;
 			line-height: 25px;
@@ -40,9 +46,30 @@ header {
 	position: relative;
 	z-index: 1;
 	
+	#page-desc {
+		font-size: 16px;
+		padding: 10px;
+		font-weight: lighter;
+	}
+	
 	.btn-toolbar {
 		margin:0;
-	}
+	
+		.btn-group {
+    		width: 100%;
+
+    		.btn {
+    			width: 15%;
+    			line-height: 24px;
+    			font-size: 12px;
+    			text-transform: uppercase; 
+    		}
+    	}
+  	}
+
+  	#btn-desc {
+  		
+  	}
 }
 
 .container-fluid {height:100%; padding:0;}
@@ -65,6 +92,15 @@ header {
 			#gradient.vertical(rgba(252, 252, 252, 0.7), rgba(228, 228, 228, 0.86));
 			border-top: 1px solid white;
 			border-bottom: 1px solid #CECECE;
+			
+			.action-title {
+				text-transform: uppercase;
+				font-weight: bold;
+			}
+			
+			.action-desc {
+				padding-top: 2px;
+			}
 
 			&:hover {
 				#gradient.vertical(rgba(218, 236, 217, 0.7), rgba(228, 228, 228, 0.86))
