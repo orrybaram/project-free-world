@@ -36,8 +36,8 @@ $(document).ready(function(){
     testBoundary = new google.maps.Polygon({
       paths: coordinates,
       strokeColor : "#FF0000",
-      strokeOpacity: 0.8,
-      strokeWeight: 3,
+      strokeOpacity: 0.5,
+      strokeWeight: 1,
       fillColor: "#FF0000",
       fillOpacity: 0.35
     });
