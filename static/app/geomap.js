@@ -13,4 +13,6 @@ if(typeof GeoMap === 'undefined' || GeoMap === null){
     model:GeoMap.GeoData,
     url: "/natindex"   
   });
+  var geo_data = new GeoMap.GeoDataCollection();
+  geo_data.fetch();
 })();
