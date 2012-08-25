@@ -45,7 +45,7 @@ def natindex():
     country_info['Literacy Rate'] = values[6]
     values_array.append({country:country_info}) 
   print values_array[0]
-  return jsonify(values_array)
+  return jsonify(values_array[0])
 
 if __name__ == '__main__':
     # Bind to PORT if defined, otherwise default to 5000.
