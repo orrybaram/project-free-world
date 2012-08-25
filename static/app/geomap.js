@@ -43,6 +43,7 @@ $(document).ready(function(){
             });
             GeoMap.plot_points(coordinates);
         });
+      }
       else{
         var coordinates = []
         _.each(boundary, function(bound){
