@@ -2,6 +2,7 @@ import os
 from flask import Flask, render_template, jsonify
 from flask.ext.sqlalchemy import SQLAlchemy
 import sys
+import json
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
@@ -44,7 +45,7 @@ def natindex():
     country_info['Government Legitmacy'] = values[5]
     country_info['Literacy Rate'] = values[6]
     values_array.append({country:country_info}) 
-  return jsonify([values_array[0], values_array[1]])
+  return json.dumps(values_array)
 
 if __name__ == '__main__':
     # Bind to PORT if defined, otherwise default to 5000.
