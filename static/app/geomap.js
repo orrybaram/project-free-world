@@ -6,3 +6,11 @@ $(document).ready(function(){
 if(typeof GeoMap === 'undefined' || GeoMap === null){
   GeoMap = {};
 };
+
+function(){
+  GeoMap.GeoData = Backbone.Model.extend(); 
+  GeoMap.GeoDataCollection = Backbone.Collection.extend({
+    model:GeoData,
+    url: "/natindex"   
+  });
+}()
