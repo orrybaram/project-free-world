@@ -47,9 +47,9 @@ def natindex():
     values_array.append({country:country_info}) 
   return Response(json.dumps(values_array), status=200, mimetype='application/json')
 
-@app.route('/geochart')
+@app.route('/geomap')
 def geochart():
-  return render_template('geochart.html')
+  return render_template('geomap.html')
 
 if __name__ == '__main__':
     # Bind to PORT if defined, otherwise default to 5000.
