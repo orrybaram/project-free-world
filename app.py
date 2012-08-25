@@ -1,5 +1,5 @@
 import os
-from flask import Flask, render_template, json
+from flask import Flask, render_template, jsonify
 from flask.ext.sqlalchemy import SQLAlchemy
 import sys
 
