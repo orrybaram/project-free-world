@@ -50,7 +50,7 @@ $(document).ready(function(){
         _.each(boundary, function(bound){
           coordinates.push(new google.maps.LatLng(bound[1],bound[0]));
         });
-        GeoMap.plots_points(coordinates);
+        GeoMap.plot_points(coordinates);
       }
     });
   });
