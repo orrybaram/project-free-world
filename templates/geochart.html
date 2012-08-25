@@ -19,7 +19,7 @@
           ['RU', 700]
         ]);
 
-        var options = {};
+        var options = {magnifyingGlass:{enable:true, zoomFactor: 5.0}};
 
         var chart = new google.visualization.GeoChart(document.getElementById('chart_div'));
         chart.draw(data, options);
