@@ -11,6 +11,19 @@ db = SQLAlchemy(app)
 DEBUG = True 
 TEMPLATE_DEBUG = DEBUG
 
+class Natindex(db.Model):
+  __tablename__ = 'natindex'
+  id = db.Column(db.Integer, primary_key=True)
+  country = db.Column(db.String(256), unique=True)
+  values = db.Column(db.String(256), unique=True)
+
+  def __init__(self, country, values):
+    self.country = country
+    self.values = values
+
+  def __rep__(self):
+    return '<Country %r>' % self.country
+
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -24,15 +37,3 @@ if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
     app.run(host='0.0.0.0', port=port)
 
-class Natindex(db.Model):
-  __tablename__ = 'natindex'
-  id = db.Column(db.Integer, primary_key=True)
-  country = db.Column(db.String(256), unique=True)
-  values = db.Column(db.String(256), unique=True)
-
-  def __init__(self, country, values):
-    self.country = country
-    self.values = values
-
-  def __rep__(self):
-    return '<Country %r>' % self.country
