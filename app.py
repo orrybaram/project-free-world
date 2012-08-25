@@ -1,7 +1,7 @@
 import os
 from flask import Flask, render_template
 from flask.ext.sqlalchemy import SQLAlchemy
-import loggin
+import logging
 
 logging.basicConfig(level=logging.DEBUG)
 
