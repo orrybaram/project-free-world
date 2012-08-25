@@ -8,11 +8,12 @@ if(typeof GeoMap === 'undefined' || GeoMap === null){
 };
 
 (function(){
-  GeoMap.GeoData = Backbone.Model.extend(); 
   GeoMap.GeoDataCollection = Backbone.Collection.extend({
-    model:GeoMap.GeoData,
     url: "/natindex"   
   });
   var geo_data = new GeoMap.GeoDataCollection();
-  geo_data.fetch();
+  GeoMap.GeoCoordinates = Backbone.Collection.extend({
+    url: "/static/json/country_boundaries.json "
+  });
+  var geo_boundaries = new GeoMap.GeoCoordinates();
 })();
