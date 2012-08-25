@@ -1,13 +1,14 @@
 import os
 from flask import Flask, render_template
 from flask.ext.sqlalchemy import SQLAlchemy
-import logging
-
-logging.basicConfig(level=logging.DEBUG)
+import sys
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
 db = SQLAlchemy(app)
+
+DEBUG = true 
+TEMPLATE_DEBUG = DEBUG
 
 @app.route('/')
 def index():
