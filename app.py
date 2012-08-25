@@ -36,13 +36,13 @@ def natindex():
     country_info = {}
     country = nat.country  
     values = nat.values.split(':')
-    country_info['continent'] = value[0]
-    country_info['Poverty Alleviation'] = value[1]
-    country_info['Economic Equality'] = value[2]
-    country_info['Infrastructure Index'] = value[3]
-    country_info['Human Rights Index'] = value[4]
-    country_info['Government Legitmacy'] = value[5]
-    country_info['Literacy Rate'] = value[6]
+    country_info['continent'] = values[0]
+    country_info['Poverty Alleviation'] = values[1]
+    country_info['Economic Equality'] = values[2]
+    country_info['Infrastructure Index'] = values[3]
+    country_info['Human Rights Index'] = values[4]
+    country_info['Government Legitmacy'] = values[5]
+    country_info['Literacy Rate'] = values[6]
     values_array.push({country:country_info})
   return jsonify(values_array)
 
