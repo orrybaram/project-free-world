@@ -48,7 +48,8 @@ def natindex():
   return Response(json.dumps(values_array), status=200, mimetype='application/json')
 
 @app.route('/geochart')
-  return render_template('geochart.html')
+  def geochart():
+    return render_template('geochart.html')
 
 if __name__ == '__main__':
     # Bind to PORT if defined, otherwise default to 5000.
