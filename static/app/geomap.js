@@ -10,7 +10,7 @@ if(typeof GeoMap === 'undefined' || GeoMap === null){
 (function(){
   GeoMap.GeoData = Backbone.Model.extend(); 
   GeoMap.GeoDataCollection = Backbone.Collection.extend({
-    model:GeoData,
+    model:GeoMap.GeoData,
     url: "/natindex"   
   });
 })();
