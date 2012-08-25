@@ -47,6 +47,9 @@ def natindex():
     values_array.append({country:country_info}) 
   return Response(json.dumps(values_array), status=200, mimetype='application/json')
 
+@app.route('/geochart')
+  return render_template('geochart.html')
+
 if __name__ == '__main__':
     # Bind to PORT if defined, otherwise default to 5000.
     port = int(os.environ.get('PORT', 5000))
