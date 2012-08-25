@@ -1,5 +1,5 @@
 import os
-from flask import Flask, render_template, jsonify
+from flask import Flask, render_template, jsonify, Response
 from flask.ext.sqlalchemy import SQLAlchemy
 import sys
 import json
@@ -45,7 +45,7 @@ def natindex():
     country_info['Government Legitmacy'] = values[5]
     country_info['Literacy Rate'] = values[6]
     values_array.append({country:country_info}) 
-  return Response(json.dumps(values_array), mimetype='application/json')
+  return Response(json.dumps(values_array), status=200, mimetype='application/json')
 
 if __name__ == '__main__':
     # Bind to PORT if defined, otherwise default to 5000.
