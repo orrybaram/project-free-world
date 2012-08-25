@@ -29,7 +29,7 @@ $(document).ready(function(){
     var boundaries = [];
     GeoMap.geo_boundaries.each(function(country){
       boundaries.push(country.get('boundaries'));
-    }
+    });
     _.each(boundaries, function(boundary){ 
       var coordinates = []
       _.each(boundary, function(value){
