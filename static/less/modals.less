@@ -17,8 +17,8 @@
   bottom: 0;
   left: 0;
   z-index: @zindexModalBackdrop;
-  background-color: @black;
-  // Fade for backdrop
+  background-color: white;
+  // Fade for backdrop  
   &.fade { opacity: 0; }
 }
 
@@ -38,10 +38,10 @@
   margin: -250px 0 0 -280px;
   background-color: @white;
   border: 1px solid #999;
-  border: 1px solid rgba(0,0,0,.3);
+  border: 5px solid rgba(124, 204, 5, 0.42);
   *border: 1px solid #999; /* IE6-7 */
   .border-radius(6px);
-  .box-shadow(0 3px 7px rgba(0,0,0,0.3));
+  .box-shadow(0 3px 7px rgba(0,0,0,0.1));
   .background-clip(padding-box);
   &.fade {
     .transition(e('opacity .3s linear, top .3s ease-out'));
