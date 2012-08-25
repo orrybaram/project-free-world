@@ -20,6 +20,7 @@ if __name__ == '__main__':
 
 class Natindex(db.Model):
   __tablename__ = 'natindex'
+  id = db.Column(db.Integer, primary_key=True)
   country = db.Column(db.String(256), unique=True)
   values = db.Column(db.String(256), unique=True)
 
