@@ -25,24 +25,22 @@ $(document).ready(function(){
 
   GeoMap.geo_boundaries = new GeoCoordinatesCollection();
   GeoMap.geo_boundaries.on('reset', function(){
-    alert('foobar');
-  })
-  GeoMap.geo_boundaries.fetch();
-  var boundaries = GeoMap.geo_boundaries.first().get('boundaries');
-  
-  var coordinates = []
-  _.each(boundaries, function(value){
-    coordinates.push(new googlemaps.LatLng(value[0], value[1]));
-  });
+    GeoMap.geo_boundaries.fetch();
+    var boundaries = GeoMap.geo_boundaries.first().get('boundaries');
+    
+    var coordinates = []
+    _.each(boundaries, function(value){
+      coordinates.push(new googlemaps.LatLng(value[0], value[1]));
+    });
 
-  testBoundary = new google.maps.Polygon({
-    paths: coordinates,
-    strokeColor : "#FF0000",
-    strokeOpacity: 0.8,
-    strokeWeight: 3,
-    fillColor: "#FF0000",
-    fillOpacity: 0.35
-  });
-  testBoundary.setMap(GeoMap.map);
-  
+    testBoundary = new google.maps.Polygon({
+      paths: coordinates,
+      strokeColor : "#FF0000",
+      strokeOpacity: 0.8,
+      strokeWeight: 3,
+      fillColor: "#FF0000",
+      fillOpacity: 0.35
+    });
+    testBoundary.setMap(GeoMap.map);
+  })
 })();
