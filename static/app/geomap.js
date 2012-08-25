@@ -31,6 +31,7 @@ $(document).ready(function(){
       boundaries.push({country: country.get('country'), coordinates: country.get('coordinates'), type: country.get('type')});
     });
     _.each(boundaries, function(boundary){ 
+      multipolygon = false;
       if(boundary['type'] === 'MultiPolygon'){
         multipolygon = true;
       }
