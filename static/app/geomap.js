@@ -24,13 +24,13 @@ $(document).ready(function(){
   });
 
   GeoMap.geo_boundaries = new GeoCoordinatesCollection();
+  GeoMap.geo_boundaries.fetch();
   GeoMap.geo_boundaries.on('reset', function(){
-    GeoMap.geo_boundaries.fetch();
     var boundaries = GeoMap.geo_boundaries.first().get('boundaries');
     
     var coordinates = []
     _.each(boundaries, function(value){
-      coordinates.push(new googlemaps.LatLng(value[0], value[1]));
+      coordinates.push(new google.maps.LatLng(value[0], value[1]));
     });
 
     testBoundary = new google.maps.Polygon({
