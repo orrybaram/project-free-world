@@ -30,7 +30,7 @@ $(document).ready(function(){
     
     var coordinates = []
     _.each(boundaries, function(value){
-      coordinates.push(new google.maps.LatLng(value[0], value[1]));
+      coordinates.push(new google.maps.LatLng(value[1],value[0]));
     });
 
     testBoundary = new google.maps.Polygon({
