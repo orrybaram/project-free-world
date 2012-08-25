@@ -34,8 +34,8 @@ def natindex():
   values_array = []
   for nat in nat_index_array:
     country_info = {}
-    country = nat_index.country  
-    values = nat_index.values.split(':')
+    country = nat.country  
+    values = nat.values.split(':')
     country_info['continent'] = value[0]
     country_info['Poverty Alleviation'] = value[1]
     country_info['Economic Equality'] = value[2]
