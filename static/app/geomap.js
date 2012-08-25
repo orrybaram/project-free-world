@@ -8,12 +8,18 @@ if(typeof GeoMap === 'undefined' || GeoMap === null){
 };
 
 (function(){
-  GeoMap.GeoDataCollection = Backbone.Collection.extend({
+  var GeoData = Backbone.Model.extend({});
+  var GeoDataCollection = Backbone.Collection.extend({
+    model: GeoData 
     url: "/natindex"   
   });
-  var geo_data = new GeoMap.GeoDataCollection();
-  GeoMap.GeoCoordinates = Backbone.Collection.extend({
-    url: "/static/json/country_boundaries.json "
+  GeoMap.geo_data = new GeoMap.GeoDataCollection();
+
+  var GeoCoordinates= Backbone.Model.extend({});
+  var GeoCoordinatesCollection = Backbone.Collection.extend({
+    model: GeoCoordinates,
+    url: "/static/json/country_boundaries.json"
   });
-  var geo_boundaries = new GeoMap.GeoCoordinates();
+
+  GeoMap.geo_boundaries = new GeoMap.GeoCoordinatesCollection();
 })();
