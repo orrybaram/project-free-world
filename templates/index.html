@@ -22,4 +22,22 @@
         </div>
     </div>
 </div>
+
+<div id="welcomeModal" class="modal hide fade">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h3>Welcome to Project Free World</h3>
+    </div>
+    <div class="modal-body">
+        <p>This is a description of the site.</p>
+    </div>
+    <div class="modal-footer">
+        
+    </div>
+</div>
+{% endblock %}
+{% block extra_js %}
+<script>
+	$('#welcomeModal').modal('show');
+</script>
 {% endblock %}
