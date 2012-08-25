@@ -26,21 +26,25 @@ $(document).ready(function(){
   GeoMap.geo_boundaries = new GeoCoordinatesCollection();
   GeoMap.geo_boundaries.fetch();
   GeoMap.geo_boundaries.on('reset', function(){
-    var boundaries = GeoMap.geo_boundaries.first().get('boundaries');
-    
-    var coordinates = []
-    _.each(boundaries, function(value){
-      coordinates.push(new google.maps.LatLng(value[1],value[0]));
+    var boundaries = [];
+    GeoMap.geo_boundaries.each(function(country){
+      boundaries.push(country.get('boundaries'));
     });
+    _.each(boundaries, function(boundary){ 
+      var coordinates = []
+      _.each(boundary, function(value){
+        coordinates.push(new google.maps.LatLng(value[1],value[0]));
+      });
 
-    testBoundary = new google.maps.Polygon({
-      paths: coordinates,
-      strokeColor : "#FF0000",
-      strokeOpacity: 0.5,
-      strokeWeight: 1,
-      fillColor: "#FF0000",
-      fillOpacity: 0.35
+      testBoundary = new google.maps.Polygon({
+        paths: coordinates,
+        strokeColor : "#FF0000",
+        strokeOpacity: 0.8,
+        strokeWeight: 1,
+        fillColor: "#FF0000",
+        fillOpacity: 0.35
+      });
+      testBoundary.setMap(GeoMap.map);
     });
-    testBoundary.setMap(GeoMap.map);
-  })
+  });
 })();
