@@ -1,11 +1,12 @@
-$(document).ready(function(){
-  mapOptions = {zoom: 1, center: new google.maps.LatLng(0,0), mapTypeId: google.maps.MapTypeId.TERRAIN};
-  var map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
-});
 
 if(typeof GeoMap === 'undefined' || GeoMap === null){
   GeoMap = {};
 };
+
+$(document).ready(function(){
+  mapOptions = {zoom: 1, center: new google.maps.LatLng(0,0), mapTypeId: google.maps.MapTypeId.TERRAIN};
+  GeoMap.map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
+});
 
 (function(){
   var GeoData = Backbone.Model.extend({});
@@ -14,6 +15,7 @@ if(typeof GeoMap === 'undefined' || GeoMap === null){
     url: "/natindex"   
   });
   GeoMap.geo_data = new GeoDataCollection();
+  GeoMap.geo_data.fetch();
 
   var GeoCoordinates= Backbone.Model.extend({});
   var GeoCoordinatesCollection = Backbone.Collection.extend({
@@ -22,4 +24,7 @@ if(typeof GeoMap === 'undefined' || GeoMap === null){
   });
 
   GeoMap.geo_boundaries = new GeoCoordinatesCollection();
+  GeoMap.geo_boundaries.fetch();
+  
+  GeoMap.geo_boundaries
 })();
