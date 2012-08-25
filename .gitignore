@@ -2,3 +2,9 @@ venv
 *.pyc
 *.sublime-project
 *.sublime-workspace
+.Python
+.app.py.swp
+bin/
+build/
+include/
+lib/
