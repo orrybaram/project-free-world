@@ -19,7 +19,6 @@ if __name__ == '__main__':
     app.run(host='0.0.0.0', port=port)
 
 class Natindex(db.Model):
-  id = db.Column(db.Integer, primary_key=True)
   country = db.Column(db.String(256), unique=True)
   values = db.Column(db.String(256), unique=True)
 
