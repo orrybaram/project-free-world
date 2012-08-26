@@ -9,7 +9,7 @@ if(typeof StatBar === 'undefined' || StatBar === null){
     _.each(data_hash, function(value,key){
       data_array.push([key, value]);
     }); 
-    var google_data = google.visualizations.arrayToDataTable(data_array);
+    var google_data = google.visualization.arrayToDataTable(data_array);
     var options = {};
     options.cht = 'bhg';
     var min = 0;
