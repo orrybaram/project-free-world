@@ -308,8 +308,26 @@ TS.literacy = [
 ]
 
 $(document).ready(function(){
-  for(var i = 0; i < 6; i++){
-    console.log(TS['poverty'][i]['country']);
-    $('#troublespot'+i).html(TS['poverty'][i]['country']);
-  }
+  default_type = 'poverty';
+  TS.choose_type(default_type);
+  TS.setup_click_handlers();
 });
+
+TS.setup_click_handlers = function(){
+  var button_events = {"poverty_button":"poverty", "economic_button":"economic", "infrastructure_button":"infrastructure", "human_rights_button":"human", "government_button":"government", "literacy_button":"literacy"}
+  _.each(button_events, function(statistic_name,button_id){ 
+    TS.add_click_event_to_buttons(statistic_name, button_id);
+  });
+}
+
+TS.add_click_event_to_buttons(statistics_type, button_id){
+  $('#'+button_id).on('click', function(){
+    TS.choose_type(statistics_type);
+  });
+}
+
+TS.choose_type = function(type){
+  for(var i = 0; i < 6; i++){
+    $('#troublespot'+i).html(TS[type][i]['country']);
+  }
+};
