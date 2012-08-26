@@ -26,8 +26,11 @@ $(document).ready(function(){
   GeoMap.geo_boundaries = new GeoCoordinatesCollection();
   GeoMap.geo_boundaries.fetch();
   GeoMap.geo_boundaries.on('reset', function(){
+    GeoMap.put_boundaries(GeoMap.geo_boundaries);
+  });
+  GeoMap.put_boundaries = function(geo_boundaries){
     var boundaries = [];
-    GeoMap.geo_boundaries.each(function(country){
+    geo_boundaries.each(function(country){
       boundaries.push({country: country.get('country'), coordinates: country.get('coordinates'), type: country.get('type')});
     });
     _.each(boundaries, function(boundary){ 
@@ -40,7 +43,8 @@ $(document).ready(function(){
         _.each(bounds, function(bound){
           console.log(boundary['country']);
           var coordinates = [];
-          _.each(bound, function(b){
+          _.each(bound[0], function(b){
+            if(boundary['country']!='Antarctica')
             coordinates.push(new google.maps.LatLng(b[1],b[0]));
           });
           GeoMap.plot_points(coordinates);
@@ -48,13 +52,13 @@ $(document).ready(function(){
       }
       else{
         var coordinates = []
-        _.each(bounds, function(bound){
+        _.each(bounds[0], function(bound){
           coordinates.push(new google.maps.LatLng(bound[1],bound[0]));
         });
         GeoMap.plot_points(coordinates);
       }
     });
-  });
+  }
   GeoMap.plot_points = function(points){
     testBoundary = new google.maps.Polygon({
       paths: points,
