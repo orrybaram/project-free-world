@@ -16,6 +16,9 @@ $(document).ready(function(){
   });
   GeoMap.geo_data = new GeoDataCollection();
   GeoMap.geo_data.fetch();
+  GeoMap.geo_data.on('reset', function(){
+    GeoMap.geo_boundaries.fetch();
+  });
 
   var GeoCoordinates= Backbone.Model.extend({});
   var GeoCoordinatesCollection = Backbone.Collection.extend({
@@ -24,11 +27,18 @@ $(document).ready(function(){
   });
 
   GeoMap.geo_boundaries = new GeoCoordinatesCollection();
-  GeoMap.geo_boundaries.fetch();
   GeoMap.geo_boundaries.on('reset', function(){
-    GeoMap.put_boundaries(GeoMap.geo_boundaries);
+    GeoMap.put_boundaries(GeoMap.geo_boundaries, GeoMap.geo_data, 'Poverty Alleviation');
   });
-  GeoMap.put_boundaries = function(geo_boundaries){
+  GeoMap.put_boundaries = function(geo_boundaries, geo_data, data_type){
+    var stat = geo_data.map(geo_data, function(data){
+      parseInt(data["data"][data_type]);
+    });
+    var max_stat = _.max(stat);
+    var min_stat = _.min(stat);
+console.log(max_stat);
+console.log(min_stat);
+
     var boundaries = [];
     geo_boundaries.each(function(country){
       boundaries.push({country: country.get('country'), coordinates: country.get('coordinates'), type: country.get('type')});
@@ -41,7 +51,6 @@ $(document).ready(function(){
       bounds = boundary['coordinates'];
       if(multipolygon == true){
         _.each(bounds, function(bound){
-          console.log(boundary['country']);
           var coordinates = [];
           _.each(bound[0], function(b){
             if(boundary['country']!='Antarctica')
