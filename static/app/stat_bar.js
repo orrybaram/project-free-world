@@ -8,7 +8,7 @@ if(typeof StatBar === 'undefined' || StatBar === null){
     data_array.push(['Statistic Type', 'Index Number']);
     _.each(data_hash, function(value,key){
       if(key !== 'continent'){
-        data_array.push([key, value]);
+        data_array.push([key, parseInt(value)]);
       }
     }); 
 console.log(data_array);
@@ -19,7 +19,7 @@ console.log(data_array);
     var max = 100;
     options.chds = min + ',' + max;
     
-    var suffix = 'test';
+    var suffix = '';
     var color = 'ff3399'
     var index = 0;
     var allbars = -1;
