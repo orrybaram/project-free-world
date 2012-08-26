@@ -79,10 +79,10 @@ $(document).ready(function(){
   GeoMap.plot_points = function(points, opacity){
     testBoundary = new google.maps.Polygon({
       paths: points,
-      strokeColor : "#00FF00",
+      strokeColor : "#003333",
       strokeOpacity: 0.8,
-      strokeWeight: 1,
-      fillColor: "#00FF00",
+      strokeWeight: 0.5,
+      fillColor: "#003333",
       fillOpacity: opacity
     });
     testBoundary.setMap(GeoMap.map);
