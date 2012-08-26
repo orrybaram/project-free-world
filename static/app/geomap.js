@@ -122,10 +122,10 @@ $(document).ready(function(){
       polygon.setOptions({strokeWeight:0.5});
     });
     google.maps.event.addListener(polygon, "click", function(event){
-      var polygon_center = polygon.getBounds().getCenter();
-      var polygon_zoom_level = GeoMap.map.getBoundsZoomLevel(polygon.getBounds());
+      var polygon_bounds = polygon.getBounds();
+      var polygon_center = polygon_bounds.getCenter();
       GeoMap.map.setCenter(polygon_center);
-      GeoMap.map.setZoom(polygon_zoom_level);
+      GeoMap.map.fitBounds(polygon_bounds);
     });
   };
   google.maps.Polygon.prototype.getBounds = function() {
