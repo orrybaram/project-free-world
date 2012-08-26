@@ -40,7 +40,6 @@ $(document).ready(function(){
         _.each(boundary, function(bound){
             var coordinates = []
             _.each(bound, function(b){
-              console.log(b[1]);
               coordinates.push(new google.maps.LatLng(b[1],b[0]));
             });
             GeoMap.plot_points(coordinates);
@@ -49,9 +48,9 @@ $(document).ready(function(){
       else{
         var coordinates = []
         _.each(boundary, function(bound){
-          coordinates.push(new google.maps.LatLng(bound[1],bound[0]));
+          //coordinates.push(new google.maps.LatLng(bound[1],bound[0]));
         });
-        GeoMap.plot_points(coordinates);
+        //GeoMap.plot_points(coordinates);
       }
     });
   });
