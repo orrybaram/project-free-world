@@ -55,6 +55,10 @@ def natindex():
 def geochart():
   return render_template('geomap.html')
 
+@app.route('/act')
+def act():
+  return render_template('act.html')
+
 if __name__ == '__main__':
     # Bind to PORT if defined, otherwise default to 5000.
     port = int(os.environ.get('PORT', 5000))

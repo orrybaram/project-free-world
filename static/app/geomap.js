@@ -36,19 +36,27 @@ $(document).ready(function(){
     });
     var max_stat = _.max(stat);
     var min_stat = _.min(stat);
-console.log(max_stat);
-console.log(min_stat);
 
     var boundaries = [];
     geo_boundaries.each(function(country){
-      boundaries.push({country: country.get('country'), coordinates: country.get('coordinates'), type: country.get('type')});
+      
+      var country_data = geo_data.where({'country': country.get('country')})
+      if(country_data.length > 0){
+        var opacity =  country_data.first().get("data")[data_type]/100.0;
+      }
+      else{
+        var opacity = 0;
+      }
+
+      boundaries.push({country: country.get('country'), coordinates: country.get('coordinates'), type: country.get('type'), opacity: opacity});
     });
     _.each(boundaries, function(boundary){ 
       multipolygon = false;
       if(boundary['type'] === 'MultiPolygon'){
         multipolygon = true;
       }
-      bounds = boundary['coordinates'];
+      var opacity = boundary['opacity'];
+      var bounds = boundary['coordinates'];
       if(multipolygon == true){
         _.each(bounds, function(bound){
           var coordinates = [];
@@ -56,7 +64,7 @@ console.log(min_stat);
             if(boundary['country']!='Antarctica')
             coordinates.push(new google.maps.LatLng(b[1],b[0]));
           });
-          GeoMap.plot_points(coordinates);
+          GeoMap.plot_points(coordinates, opacity);
         });
       }
       else{
@@ -64,18 +72,18 @@ console.log(min_stat);
         _.each(bounds[0], function(bound){
           coordinates.push(new google.maps.LatLng(bound[1],bound[0]));
         });
-        GeoMap.plot_points(coordinates);
+        GeoMap.plot_points(coordinates, opacity);
       }
     });
   }
-  GeoMap.plot_points = function(points){
+  GeoMap.plot_points = function(points, opacity){
     testBoundary = new google.maps.Polygon({
       paths: points,
       strokeColor : "#FF0000",
       strokeOpacity: 0.8,
       strokeWeight: 1,
       fillColor: "#FF0000",
-      fillOpacity: 0.35
+      fillOpacity: opacity
     });
     testBoundary.setMap(GeoMap.map);
   }
