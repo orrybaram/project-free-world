@@ -41,6 +41,7 @@ $(document).ready(function(){
           console.log(boundary['country']);
           var coordinates = [];
           _.each(bound[0], function(b){
+            if(boundary['country']!='Antarctica')
             coordinates.push(new google.maps.LatLng(b[1],b[0]));
           });
           GeoMap.plot_points(coordinates);
