@@ -37,6 +37,7 @@ $(document).ready(function(){
       }
       boundary = boundary['coordinates'];
       if(multipolygon == true){
+      console.log(boundary);
         _.each(boundary, function(bound){
             var coordinates = []
             _.each(bound, function(b){
