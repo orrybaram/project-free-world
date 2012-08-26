@@ -1,29 +1,29 @@
 import os
 from flask import Flask, render_template, jsonify, Response
-from flask.ext.sqlalchemy import SQLAlchemy
+# from flask.ext.sqlalchemy import SQLAlchemy
 import sys
 import json
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
 app.debug = True
-db = SQLAlchemy(app)
+# db = SQLAlchemy(app)
 
 DEBUG = True 
 TEMPLATE_DEBUG = DEBUG
 
-class Natindex(db.Model):
-  __tablename__ = 'natindex'
-  id = db.Column(db.Integer, primary_key=True)
-  country = db.Column(db.String(256), unique=True)
-  values = db.Column(db.String(256), unique=True)
+# class Natindex(db.Model):
+#   __tablename__ = 'natindex'
+#   id = db.Column(db.Integer, primary_key=True)
+#   country = db.Column(db.String(256), unique=True)
+#   values = db.Column(db.String(256), unique=True)
 
-  def __init__(self, country, values):
-    self.country = country
-    self.values = values
+#   def __init__(self, country, values):
+#     self.country = country
+#     self.values = values
 
-  def __rep__(self):
-    return '<Country %r>' % self.country
+#   def __rep__(self):
+#     return '<Country %r>' % self.country
 
 @app.route('/')
 def index():
