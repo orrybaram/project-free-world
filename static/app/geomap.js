@@ -79,7 +79,7 @@ $(document).ready(function(){
   GeoMap.plot_points = function(points, opacity){
     testBoundary = new google.maps.Polygon({
       paths: points,
-      strokeColor : "#FF0000",
+      strokeColor : "#00FF00",
       strokeOpacity: 0.8,
       strokeWeight: 1,
       fillColor: "#FF0000",
