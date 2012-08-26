@@ -118,7 +118,7 @@ $(document).ready(function(){
       polygon.setOptions({strokeWeight:2});
 
       var nat_index_array = GeoMap.geo_data.where({country:plot_info['country']})
-      if(nat_index_hash.length > 0){
+      if(nat_index_array.length > 0){
         var data_hash = _.first(nat_index_array).get("data");
         StatBar.drawVisualization('graph_div', data_hash);
       }
