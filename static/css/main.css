@@ -2718,7 +2718,7 @@ header #logo {
   display: inline-block;
 }
 header #logo #logo-title a {
-  font-size: 25px;
+  font-size: 22px;
   line-height: 30px;
   font-weight: 300;
   color: #495543;
@@ -2733,7 +2733,7 @@ header #logo #logo-title a:hover {
   text-decoration: none;
 }
 header #logo #logo-tagline {
-  font-size: 10px;
+  font-size: 9px;
   line-height: 25px;
   text-transform: uppercase;
   position: relative;
@@ -2785,22 +2785,28 @@ header nav ul li:hover {
   z-index: 1;
 }
 #sub-header #page-desc {
-  font-size: 15px;
+  font-size: 12px;
   padding: 5px;
   font-weight: lighter;
-  color: darkolivegreen;
+  color: #798D56;
+  display: inline-block;
+  position: relative;
+  top: -6px;
 }
 #sub-header .btn-toolbar {
-  margin: 0;
+  margin: 0 0 0 25px;
+  display: inline-block;
 }
 #sub-header .btn-toolbar .btn-group {
   width: 100%;
 }
 #sub-header .btn-toolbar .btn-group .btn {
-  width: 14%;
   line-height: 24px;
-  font-size: 12px;
+  font-size: 10px;
   text-transform: uppercase;
+  padding: 1px 20px;
+  position: relative;
+  top: 2px;
 }
 .container-fluid {
   height: 100%;
@@ -2810,6 +2816,7 @@ header nav ul li:hover {
   height: 100%;
 }
 .sidebar {
+  width: 20%!important;
   height: 100%;
   background-color: lightGrey;
   overflow: auto;
@@ -2855,6 +2862,7 @@ header nav ul li:hover {
 }
 .map {
   height: 100%;
+  width: 80%!important;
 }
 .map #map_canvas {
   height: 100%;
