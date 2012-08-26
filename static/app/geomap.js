@@ -28,7 +28,7 @@ $(document).ready(function(){
 
   GeoMap.geo_boundaries = new GeoCoordinatesCollection();
   GeoMap.geo_boundaries.on('reset', function(){
-    GeoMap.put_boundaries(GeoMap.geo_boundaries, GeoMap.geo_data, 'Poverty Alleviation');
+    GeoMap.put_boundaries(GeoMap.geo_boundaries, GeoMap.geo_data, 'Economic Equality');
   });
   GeoMap.put_boundaries = function(geo_boundaries, geo_data, data_type){
     var stat = geo_data.map(function(data){
@@ -42,7 +42,7 @@ $(document).ready(function(){
       
       var country_data = geo_data.where({'country': country.get('country')})
       if(country_data.length > 0){
-        var opacity =  country_data.first().get("data")[data_type]/100.0;
+        var opacity =  _.first(country_data).get("data")[data_type]/100.0;
       }
       else{
         var opacity = 0;
@@ -79,10 +79,10 @@ $(document).ready(function(){
   GeoMap.plot_points = function(points, opacity){
     testBoundary = new google.maps.Polygon({
       paths: points,
-      strokeColor : "#FF0000",
+      strokeColor : "#003333",
       strokeOpacity: 0.8,
-      strokeWeight: 1,
-      fillColor: "#FF0000",
+      strokeWeight: 0.5,
+      fillColor: "#003333",
       fillOpacity: opacity
     });
     testBoundary.setMap(GeoMap.map);
