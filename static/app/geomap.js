@@ -115,11 +115,29 @@ $(document).ready(function(){
     google.maps.event.addListener(polygon, "mouseover", function(event){
       infowindow.setPosition(event.latLng);
       infowindow.open(GeoMap.map);
-      polygon.setOptions(new google.maps.PolygonOptions({strokeWeight:1, strokeOpacity: 1}));
+      polygon.setOptions({strokeWeight:2});
     });
     google.maps.event.addListener(polygon, "mouseout", function(event){
       infowindow.close();
       polygon.setOptions({strokeWeight:0.5});
     });
+    google.maps.event.addListener(polygon, "click", function(event){
+      var polygon_bounds = polygon.getBounds();
+      var polygon_center = polygon_bounds.getCenter();
+      GeoMap.map.setCenter(polygon_center);
+      GeoMap.map.fitBounds(polygon_bounds);
+    });
   };
+  google.maps.Polygon.prototype.getBounds = function() {
+      var bounds = new google.maps.LatLngBounds();
+      var paths = this.getPaths();
+      var path;        
+      for (var i = 0; i < paths.getLength(); i++) {
+          path = paths.getAt(i);
+          for (var ii = 0; ii < path.getLength(); ii++) {
+              bounds.extend(path.getAt(ii));
+          }
+      }
+      return bounds;
+  }
 })();
