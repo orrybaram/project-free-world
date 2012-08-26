@@ -115,9 +115,11 @@ $(document).ready(function(){
     google.maps.event.addListener(polygon, "mouseover", function(event){
       infowindow.setPosition(event.latLng);
       infowindow.open(GeoMap.map);
+      polygon.setOptions({strokeWeight:1, strokeOpacity: 1});
     });
     google.maps.event.addListener(polygon, "mouseout", function(event){
       infowindow.close();
+      polygon.setOptions({strokeWeight:0.5});
     });
   };
 })();
