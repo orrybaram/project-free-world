@@ -46,7 +46,7 @@ $(document).ready(function(){
 
   GeoMap.geo_boundaries = new GeoCoordinatesCollection();
   GeoMap.geo_boundaries.on('reset', function(){
-    GeoMap.set_map_statistics(GeoMap.geo_boundaries, GeoMap.geo_data, 'Economic Equality');
+    GeoMap.set_map_statistics(GeoMap.geo_boundaries, GeoMap.geo_data, 'Poverty Alleviation');
   });
   GeoMap.set_map_statistics = function(geo_boundaries, geo_data, data_type){
     var stat = geo_data.map(function(data){
@@ -115,7 +115,7 @@ $(document).ready(function(){
     google.maps.event.addListener(polygon, "mouseover", function(event){
       infowindow.setPosition(event.latLng);
       infowindow.open(GeoMap.map);
-      polygon.setOptions({strokeWeight:1, strokeOpacity: 1});
+      polygon.setOptions(new google.maps.PolygonOptions({strokeWeight:1, strokeOpacity: 1}));
     });
     google.maps.event.addListener(polygon, "mouseout", function(event){
       infowindow.close();
