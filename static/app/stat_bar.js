@@ -7,11 +7,11 @@ if(typeof StatBar === 'undefined' || StatBar === null){
     var data_array = [];
     data_array.push(['Statistic Type', 'Index Number']);
     _.each(data_hash, function(value,key){
-      data_array.push([key, value]);
-
-console.log(key);
-console.log(value);
+      if(key !== 'continent'){
+        data_array.push([key, value]);
+      }
     }); 
+console.log(data_array);
     var google_data = google.visualization.arrayToDataTable(data_array);
     var options = {};
     options.cht = 'bhg';
@@ -19,7 +19,7 @@ console.log(value);
     var max = 100;
     options.chds = min + ',' + max;
     
-    var suffix = '';
+    var suffix = 'test';
     var color = 'ff3399'
     var index = 0;
     var allbars = -1;
