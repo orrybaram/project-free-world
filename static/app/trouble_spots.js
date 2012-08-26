@@ -332,7 +332,6 @@ TS.choose_type = function(type){
     var latlng_array = TS[type][i]['LatLng'];
     $('#troublespot'+i.toString()).html(country_name);
     $('#troublespot'+i.toString()).off('click');
-console.log('#troublespot'+i.toString(latlng_array);
     $('#troublespot'+i.toString()).on('click', function(){
       var map = GeoMap.map; 
       var marker_loc = new google.maps.LatLng(latlng_array[0], latlng_array[1]);
