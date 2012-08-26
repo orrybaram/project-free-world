@@ -2808,6 +2808,12 @@ header nav ul li:hover {
   position: relative;
   top: 2px;
 }
+#sub-header .btn-toolbar .btn-group .btn.selected {
+  -moz-box-shadow: inset -1px 0px 9px 2px rgba(0, 0, 0, 0.04), transparent 0 0 0, transparent 0 0 0, transparent 0 0 0, transparent 0 0 0;
+  -webkit-box-shadow: inset -1px 0px 9px 2px rgba(0, 0, 0, 0.04), transparent 0 0 0, transparent 0 0 0, transparent 0 0 0, transparent 0 0 0;
+  box-shadow: inset -1px 0px 9px 2px rgba(0, 0, 0, 0.04), transparent 0 0 0, transparent 0 0 0, transparent 0 0 0, transparent 0 0 0;
+  background: #D3F193;
+}
 .container-fluid {
   height: 100%;
   padding: 0;
