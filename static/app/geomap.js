@@ -121,8 +121,8 @@ $(document).ready(function(){
       if(nat_index_array.length == 1){
         var data_hash = _.first(nat_index_array).get("data");
         setTimeout(function(){
-          StatBar.drawVisualization('graph_div', data_hash);
-        },500);
+         // StatBar.drawVisualization('graph_div', data_hash);
+        },100);
       }
     });
     google.maps.event.addListener(polygon, "mouseout", function(event){
