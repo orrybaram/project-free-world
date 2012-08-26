@@ -329,5 +329,7 @@ TS.add_click_event_to_buttons = function(statistics_type, button_id){
 TS.choose_type = function(type){
   for(var i = 0; i < 6; i++){
     $('#troublespot'+i).html(TS[type][i]['country']);
+    $('#troublespot'+i).data('country', TS[type][i]['country']);
+    $('#troublespot'+i).data('latlng', TS[type][i]['LatLng']);
   }
 };
