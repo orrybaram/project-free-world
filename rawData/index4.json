@@ -1,140 +1,147 @@
 [
 	{
 		"Countries by Continent": "Somalia",
-		"Capital City": "Mogadishu",
-		"Human Rights Index": "2",
+		"LatLng":[10,49], 
+		"Type": 	"Human Rights Index", 
+		"Value": "2",
 		"Lat": "02°02'N",
 		"Lng": "45°25'E"
 	},
 	{
 		"Countries by Continent": "South Sudan",
-		"Capital City": "Juba",
-		"Human Rights Index": "4",
+		"LatLng": [5.88, 31.28], 
+		"Type":		"Human Rights Index", 
+		"Value": "4",
 		"Lat": "#N/A",
 		"Lng": "#N/A"
 	},
 	{
 		"Countries by Continent": "D R Congo",
-		"Capital City": "Kinshasa",
-		"Human Rights Index": "5",
+		"LatLng": [0,25],
+		 "Type":	"Human Rights Index", 
+		 "Value": "5",
 		"Lat": "39°09'N",
 		"Lng": "125°30'E"
 	},
 	{
 		"Countries by Continent": "Sudan",
-		"Capital City": "Khartoum",
-		"Human Rights Index": "6",
+		"LatLng": [15,30],
+		 "Type": 		"Human Rights Index", 
+		 "Value": "6",
 		"Lat": "15°31'N",
 		"Lng": "32°35'E"
 	},
 	{
 		"Countries by Continent": "Syria",
-		"Capital City": "Damascus",
-		"Human Rights Index": "7",
+		"LatLng": [35,38], 
+		"Type": 		"Human Rights Index", 
+		"Value": "7",
 		"Lat": "#N/A",
 		"Lng": "#N/A"
 	},
 	{
 		"Countries by Continent": "Chad",
-		"Capital City": "N'Djamena",
-		"Human Rights Index": "8",
+		"LatLng": [15,19], 
+		"Type": 		"Human Rights Index", 
+		"Value": "8",
 		"Lat": "12°10'N",
 		"Lng": "14°59'E"
 	},
 	{
 		"Countries by Continent": "Nigeria",
-		"Capital City": "Abuja",
-		"Human Rights Index": "8",
+		"LatLng": [10,8], 
+		"Type": 		"Human Rights Index", 
+		"Value": "8",
 		"Lat": "09°05'N",
 		"Lng": "07°32'E"
 	},
 	{
 		"Countries by Continent": "Pakistan",
-		"Capital City": "Islamabad",
+		"LatLng": "Islamabad",
 		"Human Rights Index": "9",
 		"Lat": "33°40'N",
 		"Lng": "73°10'E"
 	},
 	{
 		"Countries by Continent": "Afghanistan",
-		"Capital City": "Kabul",
+		"LatLng": "Kabul",
 		"Human Rights Index": "10",
 		"Lat": "34°28'N",
 		"Lng": "69°11'E"
 	},
 	{
 		"Countries by Continent": "Iraq",
-		"Capital City": "Baghdad",
+		"LatLng": "Baghdad",
 		"Human Rights Index": "10",
 		"Lat": "33°20'N",
 		"Lng": "44°30'E"
 	},
 	{
 		"Countries by Continent": "Egypt",
-		"Capital City": "Cairo",
+		"LatLng": "Cairo",
 		"Human Rights Index": "11",
 		"Lat": "30°01'N",
 		"Lng": "31°14'E"
 	},
 	{
 		"Countries by Continent": "Sri Lanka",
-		"Capital City": "Sri Jayawardenapura-Kotte",
+		"LatLng": "Sri Jayawardenapura-Kotte",
 		"Human Rights Index": "11",
 		"Lat": "#N/A",
 		"Lng": "#N/A"
 	},
 	{
 		"Countries by Continent": "Zimbabwe",
-		"Capital City": "Harare",
+		"LatLng": "Harare",
 		"Human Rights Index": "12",
 		"Lat": "17°43'S",
 		"Lng": "31°02'E"
 	},
 	{
 		"Countries by Continent": "Iran",
-		"Capital City": "Tehran",
+		"LatLng": "Tehran",
 		"Human Rights Index": "12",
 		"Lat": "#N/A",
 		"Lng": "#N/A"
 	},
 	{
 		"Countries by Continent": "Ivory Coast",
-		"Capital City": "Yamoussoukro",
+		"LatLng": "Yamoussoukro",
 		"Human Rights Index": "13",
 		"Lat": "#N/A",
 		"Lng": "#N/A"
 	},
 	{
 		"Countries by Continent": "Burma (Myanmar)",
-		"Capital City": "Naypyidaw",
+		"LatLng": "Naypyidaw",
 		"Human Rights Index": "13",
 		"Lat": "#N/A",
 		"Lng": "#N/A"
 	},
 	{
 		"Countries by Continent": "Israel/West Bank",
-		"Capital City": "Jerusalem",
+		"LatLng": "Jerusalem",
 		"Human Rights Index": "13",
 		"Lat": "#N/A",
 		"Lng": "#N/A"
 	},
 	{
 		"Countries by Continent": "Yemen",
-		"Capital City": "Sanaá",
+		"LatLng": "Sanaá",
 		"Human Rights Index": "13",
 		"Lat": "15°31'N",
 		"Lng": "41°11'E"
 	},
 	{
 		"Countries by Continent": "Nepal",
-		"Capital City": "Kathmandu",
+		"LatLng": "Kathmandu",
 		"Human Rights Index": "14",
 		"Lat": "27°45'N",
 		"Lng": "85°20'E"
 	},
 	{
 		"Countries by Continent": "Central African Republic",
-		"Capital City": "Bangui",
+		"LatLng": "Bangui",
 		"Human Rights Index": "15",
 		"Lat": "04°23'N",
 		"Lng": "18°35'E"

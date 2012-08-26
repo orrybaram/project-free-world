@@ -1,140 +1,147 @@
 [
 	{
 		"Countries by Continent": "Somalia",
-		"Capital City": "Mogadishu",
-		"Poverty Alleviation": "3",
+		"LatLng":[10,49], 
+		"Type": "Poverty Alleviation", 
+		"Value": "3",
 		"Lat": "02°02'N",
 		"Lng": "45°25'E"
 	},
 	{
 		"Countries by Continent": "Haiti",
-		"Capital City": "Port-au-Prince",
-		"Poverty Alleviation": "5",
+		"LatLng": [19,-72.4167], 
+		"Type": "Poverty Alleviation", 
+		"Value": "5",
 		"Lat": "18°40'N",
 		"Lng": "72°20'W"
 	},
 	{
 		"Countries by Continent": "Guinea-Bissau",
-		"Capital City": "Bissau",
-		"Poverty Alleviation": "10",
+		"LatLng": [12,-15], 
+		"Type":	"Poverty Alleviation",
+		 "Value": "10",
 		"Lat": "11°45'N",
 		"Lng": "15°45'W"
 	},
 	{
 		"Countries by Continent": "Guinea",
-		"Capital City": "Conakry",
-		"Poverty Alleviation": "11",
+		"LatLng": [11,-10], 
+		"Type": 		"Poverty Alleviation",
+		 "Value": "11",
 		"Lat": "09°29'N",
 		"Lng": "13°49'W"
 	},
 	{
 		"Countries by Continent": "Zimbabwe",
-		"Capital City": "Harare",
-		"Poverty Alleviation": "11",
+		"LatLng": [-20,30],
+		 "Type": "Poverty Alleviation", 
+		"Value": "11",
 		"Lat": "17°43'S",
 		"Lng": "31°02'E"
 	},
 	{
 		"Countries by Continent": "Burundi",
-		"Capital City": "Bujumbura",
-		"Poverty Alleviation": "12",
+		"LatLng": [-3.5,30], 
+		"Type": "Poverty Alleviation",
+		 "Value": "12",
 		"Lat": "03°16'S",
 		"Lng": "29°18'E"
 	},
 	{
 		"Countries by Continent": "D R Congo",
-		"Capital City": "Kinshasa",
-		"Poverty Alleviation": "12",
+		"LatLng":[0,25], 
+		"Type": "Poverty Alleviation",
+		 "Value": "12",
 		"Lat": "39°09'N",
 		"Lng": "125°30'E"
 	},
 	{
 		"Countries by Continent": "Yemen",
-		"Capital City": "Sanaá",
+		"LatLng": "Sanaá",
 		"Poverty Alleviation": "13",
 		"Lat": "15°31'N",
 		"Lng": "41°11'E"
 	},
 	{
 		"Countries by Continent": "Eritrea",
-		"Capital City": "Asmara",
+		"LatLng": "Asmara",
 		"Poverty Alleviation": "14",
 		"Lat": "15°19'N",
 		"Lng": "38°55'E"
 	},
 	{
 		"Countries by Continent": "Lesotho",
-		"Capital City": "Maseru",
+		"LatLng": "Maseru",
 		"Poverty Alleviation": "14",
 		"Lat": "29°18'S",
 		"Lng": "27°30'E"
 	},
 	{
 		"Countries by Continent": "Liberia",
-		"Capital City": "Monrovia",
+		"LatLng": "Monrovia",
 		"Poverty Alleviation": "14",
 		"Lat": "06°18'N",
 		"Lng": "10°47'W"
 	},
 	{
 		"Countries by Continent": "Niger",
-		"Capital City": "Niamey",
+		"LatLng": "Niamey",
 		"Poverty Alleviation": "14",
 		"Lat": "13°27'N",
 		"Lng": "02°06'E"
 	},
 	{
 		"Countries by Continent": "Malawi",
-		"Capital City": "Lilongwe",
+		"LatLng": "Lilongwe",
 		"Poverty Alleviation": "15",
 		"Lat": "14°00'S",
 		"Lng": "33°48'E"
 	},
 	{
 		"Countries by Continent": "Chad",
-		"Capital City": "N'Djamena",
+		"LatLng": "N'Djamena",
 		"Poverty Alleviation": "17",
 		"Lat": "12°10'N",
 		"Lng": "14°59'E"
 	},
 	{
 		"Countries by Continent": "Sierra Leone",
-		"Capital City": "Freetown",
+		"LatLng": "Freetown",
 		"Poverty Alleviation": "17",
 		"Lat": "08°30'N",
 		"Lng": "13°17'W"
 	},
 	{
 		"Countries by Continent": "Swaziland",
-		"Capital City": "Lobamba",
+		"LatLng": "Lobamba",
 		"Poverty Alleviation": "17",
 		"Lat": "26°18'S",
 		"Lng": "31°06'E"
 	},
 	{
 		"Countries by Continent": "Zambia",
-		"Capital City": "Lusaka",
+		"LatLng": "Lusaka",
 		"Poverty Alleviation": "19",
 		"Lat": "15°28'S",
 		"Lng": "28°16'E"
 	},
 	{
 		"Countries by Continent": "Central African Republic",
-		"Capital City": "Bangui",
+		"LatLng": "Bangui",
 		"Poverty Alleviation": "20",
 		"Lat": "04°23'N",
 		"Lng": "18°35'E"
 	},
 	{
 		"Countries by Continent": "East Timor",
-		"Capital City": "Dili",
+		"LatLng": "Dili",
 		"Poverty Alleviation": "20",
 		"Lat": "08°29'S",
 		"Lng": "125°34'E"
 	},
 	{
 		"Countries by Continent": "Comoros",
-		"Capital City": "Moroni",
+		"LatLng": "Moroni",
 		"Poverty Alleviation": "21",
 		"Lat": "11°40'S",
 		"Lng": "43°16'E"
