@@ -308,10 +308,7 @@ TS.literacy = [
 ]
 
 $(document).ready(function(){
-  var type = 'poverty';
   for(var i = 1; i < 7; i++){
-console.log(type);
-console.log(i);
-    $('#troublestop'+i).html(TS[type][i]['country']);
+    $('#troublestop'+i).html(TS['poverty][1]['country']);
   }
 });
