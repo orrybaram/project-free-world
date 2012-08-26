@@ -328,8 +328,18 @@ TS.add_click_event_to_buttons = function(statistics_type, button_id){
 
 TS.choose_type = function(type){
   for(var i = 0; i < 6; i++){
-    $('#troublespot'+i).html(TS[type][i]['country']);
-    $('#troublespot'+i).data('country', TS[type][i]['country']);
-    $('#troublespot'+i).data('latlng', TS[type][i]['LatLng']);
+    var country_name = TS[type][i]['country']
+    $('#troublespot'+i).html(country_name);
+    $('#troublespot'+i).off('click');
+    $('#troublespot'+i).on('click', function(){
+      var latlng_array = (TS[type][i]['LatLng']);
+      var map = GeoMap.map; 
+      var marker_loc = new google.maps.LatLng(latlng_array[0], latlng_array[1]);
+      var marker = new google.maps.Marker({
+        position: marker_loc,
+        map: map,
+        title: country_name
+      });
+    });
   }
 };
