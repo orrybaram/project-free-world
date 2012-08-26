@@ -3472,6 +3472,7 @@ footer {
   padding-top: 50px;
   font-size: 16px;
   color: #333;
+  border-top: 1px solid white;
 }
 .act-bottom .sect-head {
   text-transform: uppercase;
