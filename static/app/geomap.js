@@ -20,6 +20,13 @@ $(document).ready(function(){
     GeoMap.geo_boundaries.fetch();
   });
 
+  var button_events = {"poverty_button":"Poverty Alleviation", "economic_button":"Economic Equality", "infranstructure_button":"Infrastructure Index", "human_rights_button":"Human Rights Index", "government_button":"Government Legitmacy", "literacy_button":"Literacy Rate"}
+  _.each(button_events, function(v,k){ 
+    $("#"+k).on('click', function(){
+      GeoMap.put_boundaries(GeoMap.geo_boundaries, GeoMap.geo_data, v);
+    });
+  });
+
   var GeoCoordinates= Backbone.Model.extend({});
   var GeoCoordinatesCollection = Backbone.Collection.extend({
     model: GeoCoordinates,
