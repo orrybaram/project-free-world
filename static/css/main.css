@@ -3460,7 +3460,7 @@ footer {
   margin: 70px 0 0 0 ;
 }
 .act-top p {
-  color: gray;
+  color: #B6B6B6;
   font-size: 20px;
   font-weight: 200;
   text-align: center;
@@ -3472,6 +3472,7 @@ footer {
   padding-top: 50px;
   font-size: 16px;
   color: #333;
+  border-top: 1px solid white;
 }
 .act-bottom .sect-head {
   text-transform: uppercase;
