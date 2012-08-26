@@ -26,7 +26,7 @@ $(document).ready(function(){
   GeoMap.geo_boundaries = new GeoCoordinatesCollection();
   GeoMap.geo_boundaries.fetch();
   GeoMap.geo_boundaries.on('reset', function(){
-    GeoMap.put_boundaries(self);
+    GeoMap.put_boundaries(GeoMap.geo_boundaries);
   });
   GeoMap.put_boundaries = function(geo_boundaries){
     var boundaries = [];
