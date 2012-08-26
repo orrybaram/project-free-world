@@ -2704,17 +2704,18 @@ header {
   -moz-box-shadow: inset 0 -40px 50px -20px #f1f1f1, 0 4px 10px rgba(223, 223, 223, 0.58), transparent 0 0 0, transparent 0 0 0, transparent 0 0 0;
   -webkit-box-shadow: inset 0 -40px 50px -20px #f1f1f1, 0 4px 10px rgba(223, 223, 223, 0.58), transparent 0 0 0, transparent 0 0 0, transparent 0 0 0;
   box-shadow: inset 0 -40px 50px -20px #f1f1f1, 0 4px 10px rgba(223, 223, 223, 0.58), transparent 0 0 0, transparent 0 0 0, transparent 0 0 0;
-  padding: 5px 20px;
+  padding: 0px 20px 0 20px;
   border-bottom: 1px solid #DADADA;
   background-image: url(/static/images/noise.png);
   position: relative;
   z-index: 2;
 }
 header #logo {
-  padding-top: 3px;
+  padding-top: 7px;
   padding-left: 5px;
   text-shadow: 0 1px white;
   height: 47px;
+  display: inline-block;
 }
 header #logo #logo-title {
   font-size: 25px;
@@ -2737,6 +2738,35 @@ header #logo #logo-tagline {
   top: -7px;
   left: 2px;
   color: #B1B1B1;
+}
+header nav {
+  display: inline-block;
+  height: 53px;
+}
+header nav ul {
+  list-style: none;
+}
+header nav ul li {
+  display: inline-block;
+  padding: 20px;
+  border-right: 1px solid #F8F8F8;
+  border-left: 1px solid #E6E3E3;
+  margin: 0;
+  float: left;
+  color: gray;
+  font-size: 16px;
+}
+header nav ul li a {
+  text-decoration: none;
+  color: gray;
+}
+header nav ul li a:hover {
+  text-decoration: none;
+}
+header nav ul li:hover {
+  -moz-box-shadow: inset 0 0px 29px -15px #000000, transparent 0 0 0, transparent 0 0 0, transparent 0 0 0, transparent 0 0 0;
+  -webkit-box-shadow: inset 0 0px 29px -15px #000000, transparent 0 0 0, transparent 0 0 0, transparent 0 0 0, transparent 0 0 0;
+  box-shadow: inset 0 0px 29px -15px #000000, transparent 0 0 0, transparent 0 0 0, transparent 0 0 0, transparent 0 0 0;
 }
 #sub-header {
   padding: 5px 20px 2px;
@@ -2859,6 +2889,42 @@ footer {
 }
 #welcomeModal {
   top: 66%!important;
+}
+#welcomeModal .modal-header {
+  padding: 0px 5px 30px;
+}
+#welcomeModal .modal-body {
+  text-align: center;
+  font-size: 23px;
+  color: #61852A;
+}
+#welcomeModal #logo {
+  padding-top: 20px;
+  text-shadow: 0 1px white;
+  text-align: center;
+}
+#welcomeModal #logo #logo-title {
+  font-size: 45px;
+  line-height: 30px;
+  font-weight: 300;
+  -webkit-transition: color 0.4s linear;
+  -moz-transition: color 0.4s linear;
+  -ms-transition: color 0.4s linear;
+  -o-transition: color 0.4s linear;
+  transition: color 0.4s linear;
+  padding: 10px;
+}
+#welcomeModal #logo #logo-title:hover {
+  color: #7CCC05;
+}
+#welcomeModal #logo #logo-tagline {
+  font-size: 18px;
+  line-height: 25px;
+  text-transform: uppercase;
+  position: relative;
+  top: -1px;
+  left: 2px;
+  color: #B1B1B1;
 }
 ::-moz-selection {
   background: #BADA55;
