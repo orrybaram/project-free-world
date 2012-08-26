@@ -26,7 +26,8 @@ console.log(data_array);
     var allbars = -1;
     var fontSize = 4;
     var priority = 0
-    options.chm = [suffix, color, index, allbars, fontSize, priority].join(',');
+    options.chm = [suffix, color, index, allbars, fontSize, priority].join(','); 
+    options.colors = ['#003333']
     new google.visualization.ImageChart(document
                                         .getElementById(div_id))
                                         .draw(google_data, options);
