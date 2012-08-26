@@ -335,6 +335,7 @@ TS = {};
       $('#troublespot'+i.toString()).off('click');
       $('#troublespot'+i.toString()).on('click', function(){
         var map = GeoMap.map; 
+      console.log(latlng_array1);
         var marker_loc = new google.maps.LatLng(latlng_array1[0], latlng_array1[1]);
         var marker = new google.maps.Marker({
           position: marker_loc,
