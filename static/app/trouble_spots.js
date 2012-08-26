@@ -329,11 +329,11 @@ TS.add_click_event_to_buttons = function(statistics_type, button_id){
 TS.choose_type = function(type){
   for(var i = 0; i < 6; i++){
     var country_name = TS[type][i]['country']
+    var num = i;
     $('#troublespot'+i).html(country_name);
     $('#troublespot'+i).off('click');
     $('#troublespot'+i).on('click', function(){
-console.log(i);
-      var latlng_array = TS[type][i]['LatLng'];
+      var latlng_array = TS[type][num]['LatLng'];
       var map = GeoMap.map; 
       var marker_loc = new google.maps.LatLng(latlng_array[0], latlng_array[1]);
       var marker = new google.maps.Marker({
