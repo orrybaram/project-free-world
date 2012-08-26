@@ -112,8 +112,8 @@ $(document).ready(function(){
       content: "This is the content for: "+ plot_info['country']
     });    
     google.maps.event.addListener(polygon, "mouseover", function(event){
-      console.log(event.latLng);
-      //infowindow.open(GeoMap.map, event.latLng);
+      infowindow.setPosition(event.latLng);
+      infowindow.open(GeoMap.map);
     });
     google.maps.event.addListener(polygon, "mouseout", function(event){
       //infowindow.close();
