@@ -37,7 +37,8 @@
 <div class="container-fluid">
     <div class="row-fluid">
         <div class="span12 map">
-            <div id="map_canvas"></div>
+            {# <div id="map_canvas"></div> #}
+            <div id="chart_div"></div>
         </div>
     </div>
 </div>
@@ -59,6 +60,7 @@
 
 {% endblock %}
 {% block extra_js %}
+<script src="static/javascript/charts/FWmap1.js"></script>
 <script>
 	$('#welcomeModal').modal('show');
 </script>
