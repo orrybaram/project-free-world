@@ -1,0 +1,142 @@
+[
+	{
+		"Countries by Continent": "Somalia",
+		"Capital City": "Mogadishu",
+		"Government Legitimacy": "1",
+		"Lat": "02°02'N",
+		"Lng": "45°25'E"
+	},
+	{
+		"Countries by Continent": "South Sudan",
+		"Capital City": "Juba",
+		"Government Legitimacy": "3",
+		"Lat": "#N/A",
+		"Lng": "#N/A"
+	},
+	{
+		"Countries by Continent": "Afghanistan",
+		"Capital City": "Kabul",
+		"Government Legitimacy": "3",
+		"Lat": "34°28'N",
+		"Lng": "69°11'E"
+	},
+	{
+		"Countries by Continent": "D R Congo",
+		"Capital City": "Kinshasa",
+		"Government Legitimacy": "4",
+		"Lat": "39°09'N",
+		"Lng": "125°30'E"
+	},
+	{
+		"Countries by Continent": "Ivory Coast",
+		"Capital City": "Yamoussoukro",
+		"Government Legitimacy": "4",
+		"Lat": "#N/A",
+		"Lng": "#N/A"
+	},
+	{
+		"Countries by Continent": "Sudan",
+		"Capital City": "Khartoum",
+		"Government Legitimacy": "4",
+		"Lat": "15°31'N",
+		"Lng": "32°35'E"
+	},
+	{
+		"Countries by Continent": "Central African Republic",
+		"Capital City": "Bangui",
+		"Government Legitimacy": "7",
+		"Lat": "04°23'N",
+		"Lng": "18°35'E"
+	},
+	{
+		"Countries by Continent": "Yemen",
+		"Capital City": "Sanaá",
+		"Government Legitimacy": "7",
+		"Lat": "15°31'N",
+		"Lng": "41°11'E"
+	},
+	{
+		"Countries by Continent": "Gunea-Bissau",
+		"Capital City": "Bissau",
+		"Government Legitimacy": "8",
+		"Lat": "#N/A",
+		"Lng": "#N/A"
+	},
+	{
+		"Countries by Continent": "Iraq",
+		"Capital City": "Baghdad",
+		"Government Legitimacy": "8",
+		"Lat": "33°20'N",
+		"Lng": "44°30'E"
+	},
+	{
+		"Countries by Continent": "Chad",
+		"Capital City": "N'Djamena",
+		"Government Legitimacy": "9",
+		"Lat": "12°10'N",
+		"Lng": "14°59'E"
+	},
+	{
+		"Countries by Continent": "Haiti",
+		"Capital City": "Port-au-Prince",
+		"Government Legitimacy": "9",
+		"Lat": "18°40'N",
+		"Lng": "72°20'W"
+	},
+	{
+		"Countries by Continent": "Pakistan",
+		"Capital City": "Islamabad",
+		"Government Legitimacy": "10",
+		"Lat": "33°40'N",
+		"Lng": "73°10'E"
+	},
+	{
+		"Countries by Continent": "Guinea",
+		"Capital City": "Conakry",
+		"Government Legitimacy": "11",
+		"Lat": "09°29'N",
+		"Lng": "13°49'W"
+	},
+	{
+		"Countries by Continent": "Zimbabwe",
+		"Capital City": "Harare",
+		"Government Legitimacy": "11",
+		"Lat": "17°43'S",
+		"Lng": "31°02'E"
+	},
+	{
+		"Countries by Continent": "Nigeria",
+		"Capital City": "Abuja",
+		"Government Legitimacy": "13",
+		"Lat": "09°05'N",
+		"Lng": "07°32'E"
+	},
+	{
+		"Countries by Continent": "Syria",
+		"Capital City": "Damascus",
+		"Government Legitimacy": "13",
+		"Lat": "#N/A",
+		"Lng": "#N/A"
+	},
+	{
+		"Countries by Continent": "Libya",
+		"Capital City": "Tripoli",
+		"Government Legitimacy": "15",
+		"Lat": "#N/A",
+		"Lng": "#N/A"
+	},
+	{
+		"Countries by Continent": "East Timor",
+		"Capital City": "Dili",
+		"Government Legitimacy": "15",
+		"Lat": "08°29'S",
+		"Lng": "125°34'E"
+	},
+	{
+		"Countries by Continent": "Iran",
+		"Capital City": "Tehran",
+		"Government Legitimacy": "15",
+		"Lat": "#N/A",
+		"Lng": "#N/A"
+	}
+]

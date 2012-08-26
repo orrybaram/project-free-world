@@ -1,0 +1,142 @@
+[
+	{
+		"Countries by Continent": "Angola",
+		"Capital City": "Luanda",
+		"Economic Equality": "9",
+		"Lat": "08°50'S",
+		"Lng": "13°15'E"
+	},
+	{
+		"Countries by Continent": "D R Congo",
+		"Capital City": "Kinshasa",
+		"Economic Equality": "11",
+		"Lat": "39°09'N",
+		"Lng": "125°30'E"
+	},
+	{
+		"Countries by Continent": "Nigeria",
+		"Capital City": "Abuja",
+		"Economic Equality": "11",
+		"Lat": "09°05'N",
+		"Lng": "07°32'E"
+	},
+	{
+		"Countries by Continent": "Zimbabwe",
+		"Capital City": "Harare",
+		"Economic Equality": "11",
+		"Lat": "17°43'S",
+		"Lng": "31°02'E"
+	},
+	{
+		"Countries by Continent": "Equatorial Guinea",
+		"Capital City": "Malabo",
+		"Economic Equality": "12",
+		"Lat": "03°45'N",
+		"Lng": "08°50'E"
+	},
+	{
+		"Countries by Continent": "South Sudan",
+		"Capital City": "Juba",
+		"Economic Equality": "12",
+		"Lat": "#N/A",
+		"Lng": "#N/A"
+	},
+	{
+		"Countries by Continent": "Sudan",
+		"Capital City": "Khartoum",
+		"Economic Equality": "12",
+		"Lat": "15°31'N",
+		"Lng": "32°35'E"
+	},
+	{
+		"Countries by Continent": "Papua New Guinea",
+		"Capital City": "Port Moresby",
+		"Economic Equality": "12",
+		"Lat": "09°24'S",
+		"Lng": "147°08'E"
+	},
+	{
+		"Countries by Continent": "Bolivia",
+		"Capital City": "La Paz",
+		"Economic Equality": "12",
+		"Lat": "16°20'S",
+		"Lng": "68°10'W"
+	},
+	{
+		"Countries by Continent": "Central African Republic",
+		"Capital City": "Bangui",
+		"Economic Equality": "13",
+		"Lat": "04°23'N",
+		"Lng": "18°35'E"
+	},
+	{
+		"Countries by Continent": "Burma (Myanmar)",
+		"Capital City": "Naypyidaw",
+		"Economic Equality": "13",
+		"Lat": "#N/A",
+		"Lng": "#N/A"
+	},
+	{
+		"Countries by Continent": "Iraq",
+		"Capital City": "Baghdad",
+		"Economic Equality": "13",
+		"Lat": "33°20'N",
+		"Lng": "44°30'E"
+	},
+	{
+		"Countries by Continent": "Chad",
+		"Capital City": "N'Djamena",
+		"Economic Equality": "14",
+		"Lat": "12°10'N",
+		"Lng": "14°59'E"
+	},
+	{
+		"Countries by Continent": "Haiti",
+		"Capital City": "Port-au-Prince",
+		"Economic Equality": "14",
+		"Lat": "18°40'N",
+		"Lng": "72°20'W"
+	},
+	{
+		"Countries by Continent": "Namibia",
+		"Capital City": "Windhoek",
+		"Economic Equality": "15",
+		"Lat": "22°35'S",
+		"Lng": "17°04'E"
+	},
+	{
+		"Countries by Continent": "India",
+		"Capital City": "New Delhi",
+		"Economic Equality": "16",
+		"Lat": "28°37'N",
+		"Lng": "77°13'E"
+	},
+	{
+		"Countries by Continent": "Nepal",
+		"Capital City": "Kathmandu",
+		"Economic Equality": "16",
+		"Lat": "27°45'N",
+		"Lng": "85°20'E"
+	},
+	{
+		"Countries by Continent": "Yemen",
+		"Capital City": "Sanaá",
+		"Economic Equality": "16",
+		"Lat": "15°31'N",
+		"Lng": "41°11'E"
+	},
+	{
+		"Countries by Continent": "Brazil",
+		"Capital City": "Brasilia",
+		"Economic Equality": "16",
+		"Lat": "15°47'S",
+		"Lng": "47°55'W"
+	},
+	{
+		"Countries by Continent": "Colombia",
+		"Capital City": "Bogotá",
+		"Economic Equality": "16",
+		"Lat": "04°34'N",
+		"Lng": "74°00'W"
+	}
+]
