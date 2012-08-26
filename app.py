@@ -29,6 +29,10 @@ class Natindex(db.Model):
 def index():
     return render_template('index.html')
 
+@app.route('/act')
+def act():
+    return render_template('act.html')
+
 @app.route('/natindex')
 def natindex():
   nat_index_array = Natindex.query.all()

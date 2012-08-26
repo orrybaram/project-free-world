@@ -2859,6 +2859,42 @@ footer {
 #welcomeModal {
   top: 66%!important;
 }
+#welcomeModal .modal-header {
+  padding: 0px 5px 30px;
+}
+#welcomeModal .modal-body {
+  text-align: center;
+  font-size: 23px;
+  color: #61852A;
+}
+#welcomeModal #logo {
+  padding-top: 20px;
+  text-shadow: 0 1px white;
+  text-align: center;
+}
+#welcomeModal #logo #logo-title {
+  font-size: 45px;
+  line-height: 30px;
+  font-weight: 300;
+  -webkit-transition: color 0.4s linear;
+  -moz-transition: color 0.4s linear;
+  -ms-transition: color 0.4s linear;
+  -o-transition: color 0.4s linear;
+  transition: color 0.4s linear;
+  padding: 10px;
+}
+#welcomeModal #logo #logo-title:hover {
+  color: #7CCC05;
+}
+#welcomeModal #logo #logo-tagline {
+  font-size: 18px;
+  line-height: 25px;
+  text-transform: uppercase;
+  position: relative;
+  top: -1px;
+  left: 2px;
+  color: #B1B1B1;
+}
 ::-moz-selection {
   background: #BADA55;
   color: #fff;
