@@ -2963,16 +2963,15 @@ html {
 }
 body {
   font-family: sans-serif;
-  overflow: hidden;
   height: 100%;
 }
 header {
-  -moz-box-shadow: inset 0 -40px 50px -20px #f1f1f1, 0 4px 10px rgba(223, 223, 223, 0.58), transparent 0 0 0, transparent 0 0 0, transparent 0 0 0;
-  -webkit-box-shadow: inset 0 -40px 50px -20px #f1f1f1, 0 4px 10px rgba(223, 223, 223, 0.58), transparent 0 0 0, transparent 0 0 0, transparent 0 0 0;
-  box-shadow: inset 0 -40px 50px -20px #f1f1f1, 0 4px 10px rgba(223, 223, 223, 0.58), transparent 0 0 0, transparent 0 0 0, transparent 0 0 0;
+  -moz-box-shadow: inset 0 -40px 50px -20px #f1f1f1, 0 4px 10px rgba(36, 36, 36, 0.06), transparent 0 0 0, transparent 0 0 0, transparent 0 0 0;
+  -webkit-box-shadow: inset 0 -40px 50px -20px #f1f1f1, 0 4px 10px rgba(36, 36, 36, 0.06), transparent 0 0 0, transparent 0 0 0, transparent 0 0 0;
+  box-shadow: inset 0 -40px 50px -20px #f1f1f1, 0 4px 10px rgba(36, 36, 36, 0.06), transparent 0 0 0, transparent 0 0 0, transparent 0 0 0;
   padding: 0px 20px 0 20px;
   border-bottom: 1px solid #DADADA;
-  background-image: url(/static/images/noise.png);
+  background-image: url('/static/images/noise.png');
   position: relative;
   z-index: 2;
 }
@@ -3269,6 +3268,103 @@ footer {
   top: -1px;
   left: 2px;
   color: #B1B1B1;
+}
+.badge {
+  width: 100px;
+  background-color: red;
+  border-radius: 0 0 50px 50px;
+  height: 150px;
+  position: relative;
+  display: inline-block;
+  -moz-box-shadow: inset 50px 0 0 0px rgba(0, 0, 0, 0.07), 0 1px rgba(255, 255, 255, 0.39), transparent 0 0 0, transparent 0 0 0, transparent 0 0 0;
+  -webkit-box-shadow: inset 50px 0 0 0px rgba(0, 0, 0, 0.07), 0 1px rgba(255, 255, 255, 0.39), transparent 0 0 0, transparent 0 0 0, transparent 0 0 0;
+  box-shadow: inset 50px 0 0 0px rgba(0, 0, 0, 0.07), 0 1px rgba(255, 255, 255, 0.39), transparent 0 0 0, transparent 0 0 0, transparent 0 0 0;
+  margin: 25px 66px;
+  text-shadow: 0 1px rgba(255, 255, 255, 0.21);
+}
+.badge .banner {
+  background-color: black;
+  padding: 3px 22px;
+  margin-top: 20px;
+  color: white;
+  position: relative;
+  width: 74px;
+  right: 8px;
+  text-align: center;
+}
+.badge i {
+  font-size: 70px;
+  position: absolute;
+  left: 20%;
+  top: 45%;
+}
+.badge.skills,
+.badge.grass {
+  background-color: #65CDD1;
+}
+.badge.skills i,
+.badge.grass i {
+  color: #41A1A5;
+}
+.badge.skills .banner,
+.badge.grass .banner {
+  background-color: #41A1A5;
+}
+.badge.crowdfunding,
+.badge.donate {
+  background-color: #BC87E6;
+}
+.badge.crowdfunding i,
+.badge.donate i {
+  color: #9B68C4;
+}
+.badge.crowdfunding .banner,
+.badge.donate .banner {
+  background-color: #9B68C4;
+}
+.badge.volunteer,
+.badge.discover {
+  background-color: #E740B8;
+}
+.badge.volunteer i,
+.badge.discover i {
+  color: #B42E8E;
+}
+.badge.volunteer .banner,
+.badge.discover .banner {
+  background-color: #B42E8E;
+}
+.badge.scale,
+.badge.connect {
+  background-color: #B7E664;
+}
+.badge.scale i,
+.badge.connect i {
+  color: #9BC454;
+}
+.badge.scale .banner,
+.badge.connect .banner {
+  background-color: #9BC454;
+}
+.act-top {
+  background-image: url(/static/images/cartographer.png);
+}
+.act-top h1 {
+  color: white;
+  text-align: center;
+  margin: 70px 0 0 0 ;
+}
+.act-top p {
+  color: gray;
+  font-size: 20px;
+  font-weight: 200;
+  text-align: center;
+  margin: 20px 0;
+  line-height: 30px;
+}
+.act-bottom {
+  background-image: url('/static/images/noise.png');
+  padding-top: 50px;
 }
 ::-moz-selection {
   background: #BADA55;
