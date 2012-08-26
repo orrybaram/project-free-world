@@ -3,7 +3,7 @@ TS = {};
 $(document).ready(function(){
   var type = 'poverty';
   for(var i = 1; i < 7; i++){
-    $('#troublestop'+i).html(ts[type][i]['country']);
+    $('#troublestop'+i).html(TS[type][i]['country']);
   }
 });
 
