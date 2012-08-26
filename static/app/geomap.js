@@ -16,6 +16,9 @@ $(document).ready(function(){
   });
   GeoMap.geo_data = new GeoDataCollection();
   GeoMap.geo_data.fetch();
+  GeoMap.geo_data.on('reset', function(){
+    GeoMap.geo_boundaries.fetch();
+  });
 
   var GeoCoordinates= Backbone.Model.extend({});
   var GeoCoordinatesCollection = Backbone.Collection.extend({
@@ -24,27 +27,64 @@ $(document).ready(function(){
   });
 
   GeoMap.geo_boundaries = new GeoCoordinatesCollection();
-  GeoMap.geo_boundaries.fetch();
   GeoMap.geo_boundaries.on('reset', function(){
+    GeoMap.put_boundaries(GeoMap.geo_boundaries, GeoMap.geo_data, 'Poverty Alleviation');
+  });
+  GeoMap.put_boundaries = function(geo_boundaries, geo_data, data_type){
+    var stat = geo_data.map(function(data){
+      return parseInt(data.get("data")[data_type]);
+    });
+    var max_stat = _.max(stat);
+    var min_stat = _.min(stat);
+
     var boundaries = [];
-    GeoMap.geo_boundaries.each(function(country){
-      boundaries.push(country.get('boundaries'));
+    geo_boundaries.each(function(country){
+      
+      var country_data = geo_data.where({'country': country.get('country')})
+      if(country_data.length > 0){
+        var opacity =  country_data.first().get("data")[data_type]/100.0;
+      }
+      else{
+        var opacity = 0;
+      }
+
+      boundaries.push({country: country.get('country'), coordinates: country.get('coordinates'), type: country.get('type'), opacity: opacity});
     });
     _.each(boundaries, function(boundary){ 
-      var coordinates = []
-      _.each(boundary, function(value){
-        coordinates.push(new google.maps.LatLng(value[1],value[0]));
-      });
-
-      testBoundary = new google.maps.Polygon({
-        paths: coordinates,
-        strokeColor : "#FF0000",
-        strokeOpacity: 0.8,
-        strokeWeight: 1,
-        fillColor: "#FF0000",
-        fillOpacity: 0.35
-      });
-      testBoundary.setMap(GeoMap.map);
+      multipolygon = false;
+      if(boundary['type'] === 'MultiPolygon'){
+        multipolygon = true;
+      }
+      var opacity = boundary['opacity'];
+      var bounds = boundary['coordinates'];
+      if(multipolygon == true){
+        _.each(bounds, function(bound){
+          var coordinates = [];
+          _.each(bound[0], function(b){
+            if(boundary['country']!='Antarctica')
+            coordinates.push(new google.maps.LatLng(b[1],b[0]));
+          });
+          GeoMap.plot_points(coordinates, opacity);
+        });
+      }
+      else{
+        var coordinates = []
+        _.each(bounds[0], function(bound){
+          coordinates.push(new google.maps.LatLng(bound[1],bound[0]));
+        });
+        GeoMap.plot_points(coordinates, opacity);
+      }
     });
-  });
+  }
+  GeoMap.plot_points = function(points, opacity){
+    testBoundary = new google.maps.Polygon({
+      paths: points,
+      strokeColor : "#FF0000",
+      strokeOpacity: 0.8,
+      strokeWeight: 1,
+      fillColor: "#FF0000",
+      fillOpacity: opacity
+    });
+    testBoundary.setMap(GeoMap.map);
+  }
 })();
