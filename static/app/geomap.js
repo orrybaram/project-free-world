@@ -31,13 +31,13 @@ $(document).ready(function(){
     GeoMap.put_boundaries(GeoMap.geo_boundaries, GeoMap.geo_data, 'Poverty Alleviation');
   });
   GeoMap.put_boundaries = function(geo_boundaries, geo_data, data_type){
-    var stat = geo_data.map(geo_data, function(data){
+    var stat = geo_data.map(function(data){
       return parseInt(data["data"][data_type]);
     });
-//    var max_stat = _.max(stat);
-//    var min_stat = _.min(stat);
-//console.log(max_stat);
-//console.log(min_stat);
+    var max_stat = _.max(stat);
+    var min_stat = _.min(stat);
+console.log(max_stat);
+console.log(min_stat);
 
     var boundaries = [];
     geo_boundaries.each(function(country){
