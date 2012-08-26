@@ -28,7 +28,7 @@ $(document).ready(function(){
 
   GeoMap.geo_boundaries = new GeoCoordinatesCollection();
   GeoMap.geo_boundaries.on('reset', function(){
-    GeoMap.put_boundaries(GeoMap.geo_boundaries, GeoMap.geo_data, 'Poverty Alleviation');
+    GeoMap.put_boundaries(GeoMap.geo_boundaries, GeoMap.geo_data, 'Economic Equality');
   });
   GeoMap.put_boundaries = function(geo_boundaries, geo_data, data_type){
     var stat = geo_data.map(function(data){
