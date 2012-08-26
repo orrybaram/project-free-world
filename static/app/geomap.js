@@ -108,7 +108,7 @@ $(document).ready(function(){
     polygon.setMap(GeoMap.map);
   };
   GeoMap.add_polygon_listeners = function(polygon, plot_info){
-    var infowindow = new google.maps.InfoWindow({
+    var infowindow = new google.maps.InfoBubble({
       content: plot_info['country']+":<br/>"+plot_info['data_type']+": "+plot_info['data_number'],
       disableAutoPan: true
     });    
