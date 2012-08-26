@@ -2750,9 +2750,10 @@ header #logo #logo-tagline {
   z-index: 1;
 }
 #sub-header #page-desc {
-  font-size: 16px;
-  padding: 10px;
+  font-size: 15px;
+  padding: 5px;
   font-weight: lighter;
+  color: darkolivegreen;
 }
 #sub-header .btn-toolbar {
   margin: 0;
