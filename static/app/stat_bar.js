@@ -19,7 +19,7 @@ if(typeof StatBar === 'undefined' || StatBar === null){
     var suffix = '';
     var colors = 'ff3399'
     var index = 0;
-    var allbars = -l;
+    var allbars = -1;
     var fontSize = 10;
     var priority = 0
     options.chm = [suffix, color, index, allbars, fontSize, priority].join(',');
