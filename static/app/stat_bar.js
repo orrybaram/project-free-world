@@ -17,7 +17,7 @@ if(typeof StatBar === 'undefined' || StatBar === null){
     options.chds = min + ',' + max;
     
     var suffix = '';
-    var colors = 'ff3399'
+    var color = 'ff3399'
     var index = 0;
     var allbars = -1;
     var fontSize = 10;
