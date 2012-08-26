@@ -2,7 +2,6 @@ html {height:100%;}
 
 body {
   font-family: sans-serif;
-  overflow: hidden;
   height:100%;
 }
 
@@ -10,7 +9,7 @@ header {
 	.box-shadow(inset 0 -40px 50px -20px #F1F1F1, 0 4px 10px rgba(223, 223, 223, 0.58));
 	padding: 0px 20px 0 20px;
 	border-bottom: 1px solid #DADADA;
-	background-image: url(/static/images/noise.png);
+	background-image: url('/static/images/noise.png');
 	position: relative;
 	z-index: 2;
 
@@ -296,6 +295,96 @@ footer {
 			color: #B1B1B1;
 		}
 	}
+}
+
+.badge {
+	width:100px;
+	background-color: red;
+	border-radius: 0 0 50px 50px;
+	height:150px;
+	position: relative;
+	display: inline-block;
+	.box-shadow(inset 50px 0 0 0px rgba(0, 0, 0, 0.07), 0 1px rgba(255, 255, 255, 0.39));
+	margin:25px 66px;
+	text-shadow: 0 1px rgba(255, 255, 255, 0.21);
+
+	.banner {
+		background-color:black;
+		padding: 3px 22px;
+		margin-top:20px;
+		color:white;
+		position: relative;
+		width: 74px;
+		right: 8px;
+		text-align: center;
+	}
+
+	i {
+		font-size: 70px;
+		position: absolute;
+		left: 24%;
+		top: 45%;
+	}
+
+	&.skills, &.grass {
+		background-color: #65CDD1;
+		i {
+			color:#41A1A5;
+		}
+		.banner {
+			background-color:#41A1A5;
+
+		}
+	}
+	&.crowdfunding, &.donate {
+		background-color: #BC87E6;
+		i {
+			color:#9B68C4;
+		}
+		.banner {
+			background-color:#9B68C4;
+		}
+	}
+	&.volunteer, &.discover {
+		background-color: #E740B8;
+		i {
+			color:#B42E8E;
+		}
+		.banner {
+			background-color:#B42E8E;
+		}
+	}
+	&.scale, &.connect {
+		background-color: #B7E664;
+		i {
+			color:#9BC454;
+		}
+		.banner {
+			background-color:#9BC454;
+		}
+	}
+}
+
+.act-top {
+	background-image: url(/static/images/cartographer.png);
+
+	h1 {
+		color:white;
+		text-align: center;
+		margin:70px 0 0 0 ;
+	}
+	p {
+		color: gray;
+		font-size: 20px;
+		font-weight: 200;
+		text-align: center;
+		margin: 20px 0;
+		line-height: 30px;
+	}
+}
+
+.act-bottom {
+	background-image: url('/static/images/noise.png');
 }
 
 
