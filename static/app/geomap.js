@@ -32,7 +32,7 @@ $(document).ready(function(){
   });
   GeoMap.put_boundaries = function(geo_boundaries, geo_data, data_type){
     var stat = geo_data.map(function(data){
-      return parseInt(data["data"][data_type]);
+      return parseInt(data.get("data")[data_type]);
     });
     var max_stat = _.max(stat);
     var min_stat = _.min(stat);
