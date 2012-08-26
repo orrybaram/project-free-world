@@ -2711,22 +2711,32 @@ header {
   z-index: 2;
 }
 header #logo {
-  padding-top: 5px;
+  padding-top: 3px;
   padding-left: 5px;
   text-shadow: 0 1px white;
+  height: 47px;
 }
 header #logo #logo-title {
-  font-size: 32px;
+  font-size: 25px;
   line-height: 30px;
   font-weight: 300;
+  -webkit-transition: color 0.4s linear;
+  -moz-transition: color 0.4s linear;
+  -ms-transition: color 0.4s linear;
+  -o-transition: color 0.4s linear;
+  transition: color 0.4s linear;
 }
 header #logo #logo-title:hover {
-  color: blue;
+  color: #7CCC05;
 }
 header #logo #logo-tagline {
-  font-size: 13px;
+  font-size: 10px;
   line-height: 25px;
   text-transform: uppercase;
+  position: relative;
+  top: -7px;
+  left: 2px;
+  color: #B1B1B1;
 }
 #sub-header {
   padding: 5px 20px 2px;
@@ -2751,7 +2761,7 @@ header #logo #logo-tagline {
   width: 100%;
 }
 #sub-header .btn-toolbar .btn-group .btn {
-  width: 15%;
+  width: 14%;
   line-height: 24px;
   font-size: 12px;
   text-transform: uppercase;
@@ -2813,6 +2823,27 @@ header #logo #logo-tagline {
 .map #map_canvas {
   height: 100%;
   width: 100%;
+}
+#act-now-footer {
+  padding: 5px 20px;
+  position: fixed;
+  bottom: 0;
+  background-color: #99DD08;
+  width: 100%;
+  border-top: 1px solid #B9FFAB;
+  background-image: url(/static/images/noise.png);
+  color: white;
+  text-shadow: 0 -1px #48a50a;
+  font-size: 30px;
+  line-height: 30px;
+  text-align: center;
+  -moz-box-shadow: inset 0 -20px 50px rgba(0, 0, 0, 0.18), transparent 0 0 0, transparent 0 0 0, transparent 0 0 0, transparent 0 0 0;
+  -webkit-box-shadow: inset 0 -20px 50px rgba(0, 0, 0, 0.18), transparent 0 0 0, transparent 0 0 0, transparent 0 0 0, transparent 0 0 0;
+  box-shadow: inset 0 -20px 50px rgba(0, 0, 0, 0.18), transparent 0 0 0, transparent 0 0 0, transparent 0 0 0, transparent 0 0 0;
+}
+#act-now-footer:hover {
+  text-decoration: none;
+  background: #99E739;
 }
 footer {
   padding: 3px 20px;
