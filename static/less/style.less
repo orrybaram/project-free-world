@@ -148,6 +148,7 @@ header {
 			#gradient.vertical(rgba(252, 252, 252, 0.7), rgba(228, 228, 228, 0.86));
 			border-top: 1px solid white;
 			border-bottom: 1px solid #CECECE;
+			cursor: pointer;
 			
 			.action-title {
 				text-transform: uppercase;
@@ -160,6 +161,14 @@ header {
 
 			&:hover {
 				#gradient.vertical(rgba(218, 236, 217, 0.7), rgba(228, 228, 228, 0.86))
+			}
+
+			.label {
+				display: inline;
+				float: right;
+				background-color: #D5661E;
+				border: 1px solid #C24C1F;
+				box-shadow: 0 1px white;
 			}
 		}
 	}
@@ -298,9 +307,9 @@ footer {
 }
 
 .badge {
-	width:100px;
+	width:80px;
 	background-color: red;
-	border-radius: 0 0 50px 50px;
+	border-radius: 0 0 50px 50px;	
 	height:150px;
 	position: relative;
 	display: inline-block;
@@ -315,7 +324,7 @@ footer {
 		color:white;
 		position: relative;
 		width: 74px;
-		right: 8px;
+		right: 19px;
 		text-align: center;
 	}
 
