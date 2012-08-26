@@ -18,13 +18,13 @@ console.log(data_array);
     var min = 0;
     var max = 100;
     options.chds = min + ',' + max;
-    options.chs = '125x75';
+    options.chs = '200x75';
     
     var suffix = '';
     var color = 'ff3399'
     var index = 0;
     var allbars = -1;
-    var fontSize = 5;
+    var fontSize = 4;
     var priority = 0
     options.chm = [suffix, color, index, allbars, fontSize, priority].join(',');
     new google.visualization.ImageChart(document
