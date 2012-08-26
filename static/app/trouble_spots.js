@@ -330,6 +330,7 @@ TS.choose_type = function(type){
   for(var i = 0; i < 6; i++){
     var country_name = TS[type][i]['country']
     var latlng_array = TS[type][i]['LatLng'];
+console.log(latlng_array);
     $('#troublespot'+i.toString()).html(country_name);
     $('#troublespot'+i.toString()).off('click');
     $('#troublespot'+i.toString()).on('click', function(){
