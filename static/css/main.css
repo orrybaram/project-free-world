@@ -2940,6 +2940,75 @@ a.thumbnail:hover {
 .thumbnail .caption {
   padding: 9px;
 }
+.label,
+.badge {
+  font-size: 10.998px;
+  font-weight: bold;
+  line-height: 14px;
+  color: #ffffff;
+  vertical-align: baseline;
+  white-space: nowrap;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #999999;
+}
+.label {
+  padding: 1px 4px 2px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+.badge {
+  padding: 1px 9px 2px;
+  -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  border-radius: 9px;
+}
+a.label:hover,
+a.badge:hover {
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+}
+.label-important,
+.badge-important {
+  background-color: #b94a48;
+}
+.label-important[href],
+.badge-important[href] {
+  background-color: #953b39;
+}
+.label-warning,
+.badge-warning {
+  background-color: #f89406;
+}
+.label-warning[href],
+.badge-warning[href] {
+  background-color: #c67605;
+}
+.label-success,
+.badge-success {
+  background-color: #468847;
+}
+.label-success[href],
+.badge-success[href] {
+  background-color: #356635;
+}
+.label-info,
+.badge-info {
+  background-color: #3a87ad;
+}
+.label-info[href],
+.badge-info[href] {
+  background-color: #2d6987;
+}
+.label-inverse,
+.badge-inverse {
+  background-color: #333333;
+}
+.label-inverse[href],
+.badge-inverse[href] {
+  background-color: #1a1a1a;
+}
 .pull-right {
   float: right;
 }
@@ -3123,6 +3192,7 @@ header nav ul li.current {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='rgba(252, 252, 252, 0.7)', endColorstr='rgba(228, 228, 228, 0.86)', GradientType=0);
   border-top: 1px solid white;
   border-bottom: 1px solid #CECECE;
+  cursor: pointer;
 }
 .sidebar ul li .action-title {
   text-transform: uppercase;
@@ -3141,6 +3211,13 @@ header nav ul li.current {
   background-image: linear-gradient(top, rgba(218, 236, 217, 0.7), rgba(228, 228, 228, 0.86));
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='rgba(218, 236, 217, 0.7)', endColorstr='rgba(228, 228, 228, 0.86)', GradientType=0);
+}
+.sidebar ul li .label {
+  display: inline;
+  float: right;
+  background-color: #D5661E;
+  border: 1px solid #C24C1F;
+  box-shadow: 0 1px white;
 }
 .map {
   height: 100%;
