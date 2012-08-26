@@ -109,7 +109,8 @@ $(document).ready(function(){
   };
   GeoMap.add_polygon_listeners = function(polygon, plot_info){
     var infowindow = new google.maps.InfoWindow({
-      content: "This is the content for: "+ plot_info['country']
+      content: "This is the content for: "+ plot_info['country'],
+      disableAutoPan: true
     });    
     google.maps.event.addListener(polygon, "mouseover", function(event){
       infowindow.setPosition(event.latLng);
