@@ -27,7 +27,6 @@ class Natindex(db.Model):
 
 @app.route('/')
 def index():
-    
     return render_template('index.html', title = 'Map')
 
 @app.route('/act')
