@@ -32,8 +32,12 @@
   <script type='text/javascript' src='/static/javascript/backbone-min.js'></script>
   <script src="static/javascript/plugins.js"></script>
   <script type='text/javascript' src='/static/app/geomap.js'></script>
+  <script type='text/javascript' src='/static/app/stat_bar.js'></script>
   <script type='text/javascript' src='/static/app/trouble_spots.js'></script>
   <script type='text/javascript' src='https://www.google.com/jsapi'></script>
+  <script type='text/javascript'>
+  google.load("visualization", "1.0", {packages:["imagechart"]});
+  </script>
   
   <script src="static/javascript/script.js"></script>
   {% block extra_js %}{% endblock %}
