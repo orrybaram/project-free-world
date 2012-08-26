@@ -3153,6 +3153,7 @@ header nav ul li.current {
 }
 .thumbnail {
   background-color: whitesmoke;
+  margin: 5px;
 }
 .table {
   background-color: #EEE;
@@ -3160,6 +3161,14 @@ header nav ul li.current {
 .resources img {
   max-width: 150px;
   max-height: 100px;
+}
+#act-statement {
+  margin-left: 30px;
+  margin-right: 30px;
+  color: darkSlateBlue;
+  line-height: 28px;
+  font-weight: 700;
+  font-size: 20px;
 }
 #act-now-footer {
   padding: 5px 20px;
