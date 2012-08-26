@@ -23,6 +23,8 @@ $(document).ready(function(){
   var button_events = {"poverty_button":"Poverty Alleviation", "economic_button":"Economic Equality", "infranstructure_button":"Infrastructure Index", "human_rights_button":"Human Rights Index", "government_button":"Government Legitmacy", "literacy_button":"Literacy Rate"}
   _.each(button_events, function(v,k){ 
     $("#"+k).on('click', function(){
+      mapOptions = {zoom: 3, center: new google.maps.LatLng(0,0), mapTypeId: google.maps.MapTypeId.TERRAIN};
+      GeoMap.map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
       GeoMap.put_boundaries(GeoMap.geo_boundaries, GeoMap.geo_data, v);
     });
   });
