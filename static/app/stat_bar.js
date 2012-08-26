@@ -15,9 +15,6 @@ console.log(data_array);
     var google_data = google.visualization.arrayToDataTable(data_array);
     var options = {};
     options.cht = 'bhg';
-    var min = 0;
-    var max = 100;
-    options.chds = min + ',' + max;
     options.chs = '300x75';
     
     var suffix = '';
