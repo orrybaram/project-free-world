@@ -8,17 +8,18 @@ body {
 
 header {
 	.box-shadow(inset 0 -40px 50px -20px #F1F1F1, 0 4px 10px rgba(223, 223, 223, 0.58));
-	padding: 5px 20px;
+	padding: 0px 20px 0 20px;
 	border-bottom: 1px solid #DADADA;
 	background-image: url(/static/images/noise.png);
 	position: relative;
 	z-index: 2;
 
 	#logo {
-		padding-top: 3px;
+		padding-top: 7px;
 		padding-left: 5px;
 		text-shadow: 0 1px white;
 		height: 47px;
+		display: inline-block;
 
 		#logo-title {
 			font-size: 25px;
@@ -40,6 +41,37 @@ header {
 			top: -7px;
 			left:2px;
 			color: #B1B1B1;
+		}
+	}
+	nav {
+		display: inline-block;
+		height: 53px;
+
+		ul {
+			list-style: none;
+			li {
+				display: inline-block;
+				padding: 20px;
+				border-right: 1px solid #F8F8F8;
+				border-left: 1px solid #E6E3E3;
+				margin: 0;
+				float: left;
+				color: gray;
+				font-size: 16px;
+				// &:first-child {border-right:0;}
+				// &:last-child {border-right:0;}
+
+				a {
+					text-decoration: none;
+					color:gray;
+
+					&:hover{ text-decoration: none;}
+				}
+
+				&:hover {
+					.box-shadow(inset 0 0px 29px -15px black);
+				}
+			}
 		}
 	}
 }

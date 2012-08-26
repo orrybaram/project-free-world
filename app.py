@@ -27,11 +27,13 @@ class Natindex(db.Model):
 
 @app.route('/')
 def index():
+    title = 'Map'
     return render_template('index.html')
 
 @app.route('/act')
 def act():
-    return render_template('act.html')
+    context = {title: 'Act'}
+    return render_template('act.html', context)
 
 @app.route('/natindex')
 def natindex():
