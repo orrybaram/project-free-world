@@ -3266,17 +3266,6 @@ header nav ul li.current {
   height: 100%;
   width: 100%;
 }
-.thumbnail {
-  background-color: whitesmoke;
-  margin: 5px;
-}
-.table {
-  background-color: #EEE;
-}
-.resources img {
-  max-width: 150px;
-  max-height: 100px;
-}
 #act-statement {
   margin-left: 30px;
   margin-right: 30px;
@@ -3481,6 +3470,28 @@ footer {
 .act-bottom {
   background-image: url('/static/images/noise.png');
   padding-top: 50px;
+  font-size: 16px;
+  color: #333;
+}
+.act-bottom .sect-head {
+  text-transform: uppercase;
+  color: #666;
+  border-bottom: 1px solid gray;
+  margin: 4px;
+}
+.act-bottom .resources img {
+  max-width: 200px;
+  max-height: 120px;
+}
+.act-bottom .resources:hover {
+  box-shadow: orange;
+}
+.act-bottom .resources p {
+  margin-top: 8px;
+}
+.act-bottom .resources strong {
+  text-transform: uppercase;
+  font-size: 14px;
 }
 ::-moz-selection {
   background: #BADA55;
