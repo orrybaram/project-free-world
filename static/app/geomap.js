@@ -116,7 +116,7 @@ $(document).ready(function(){
       infowindow.open(GeoMap.map);
     });
     google.maps.event.addListener(polygon, "mouseout", function(event){
-      //infowindow.close();
+      infowindow.close();
     });
   };
 })();
