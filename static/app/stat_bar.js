@@ -21,7 +21,7 @@ console.log(data_array);
     options.chs = '300x75';
     
     var suffix = '';
-    var color = 'ff3399'
+    var color = '003333'
     var index = 0;
     var allbars = -1;
     var fontSize = 4;
