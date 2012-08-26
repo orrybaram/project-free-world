@@ -3204,9 +3204,9 @@ header nav ul li.current {
 .sidebar h2 {
   font-size: 16px;
   padding: 0 20px;
-  background-color: #F37158;
-  color: #9B0E0E;
-  text-shadow: 0 -1px #f59898;
+  background-color: #E0E0E0;
+  color: #C24409;
+  text-shadow: 0 -1px #ffe5e5;
   border-top: 1px solid #FACACA;
 }
 .sidebar h2 i {
