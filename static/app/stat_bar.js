@@ -8,6 +8,9 @@ if(typeof StatBar === 'undefined' || StatBar === null){
     data_array.push(['Statistic Type', 'Index Number']);
     _.each(data_hash, function(value,key){
       data_array.push([key, value]);
+
+console.log(key);
+console.log(value);
     }); 
     var google_data = google.visualization.arrayToDataTable(data_array);
     var options = {};
