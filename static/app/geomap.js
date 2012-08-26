@@ -34,10 +34,10 @@ $(document).ready(function(){
     var stat = geo_data.map(geo_data, function(data){
       return parseInt(data["data"][data_type]);
     });
-    var max_stat = _.max(stat);
-    var min_stat = _.min(stat);
-console.log(max_stat);
-console.log(min_stat);
+//    var max_stat = _.max(stat);
+//    var min_stat = _.min(stat);
+//console.log(max_stat);
+//console.log(min_stat);
 
     var boundaries = [];
     geo_boundaries.each(function(country){
