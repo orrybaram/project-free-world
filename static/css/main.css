@@ -3097,12 +3097,6 @@ header nav ul li.current {
 .row-fluid {
   height: 100%;
 }
-.thumbnail {
-  background-color: whitesmoke;
-}
-.table {
-  background-color: #EEE;
-}
 .sidebar {
   width: 20%!important;
   height: 100%;
@@ -3155,6 +3149,16 @@ header nav ul li.current {
 .map #map_canvas {
   height: 100%;
   width: 100%;
+}
+.thumbnail {
+  background-color: whitesmoke;
+}
+.table {
+  background-color: #EEE;
+}
+.resources img {
+  max-width: 150px;
+  max-height: 100px;
 }
 #act-now-footer {
   padding: 5px 20px;
