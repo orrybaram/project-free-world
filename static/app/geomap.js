@@ -108,15 +108,15 @@ $(document).ready(function(){
     polygon.setMap(GeoMap.map);
   };
   GeoMap.add_polygon_listeners = function(polygon, plot_info){
-console.log(plot_info);
     var infowindow = new google.maps.InfoWindow({
       content: "This is the content for: "+ plot_info['country']
     });    
     google.maps.event.addListener(polygon, "mouseover", function(event){
-      infowindow.open(GeoMap.map, event.latLng);
+      alert(plot_info['country']);
+      //infowindow.open(GeoMap.map, event.latLng);
     });
     google.maps.event.addListener(polygon, "mouseout", function(event){
-      infowindow.close();
+      //infowindow.close();
     });
   };
 })();
