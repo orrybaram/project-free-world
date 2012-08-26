@@ -109,7 +109,7 @@ $(document).ready(function(){
   };
   GeoMap.add_polygon_listeners = function(polygon, plot_info){
     var infowindow = new google.maps.InfoWindow({
-      content: plot_info['country']+":<br/>"+plot_info['data_type']+": "+plot_info['data_number'] + '<br/><div id = "graph_div"></div>',
+      content: plot_info['country']+":<br/>"+plot_info['data_type']+": "+plot_info['data_number'] + '<br/><div style="width:100%" id="graph_div"></div>',
       disableAutoPan: true
     });    
     google.maps.event.addListener(polygon, "mouseover", function(event){
@@ -120,7 +120,9 @@ $(document).ready(function(){
       var nat_index_array = GeoMap.geo_data.where({country:plot_info['country']})
       if(nat_index_array.length > 0){
         var data_hash = _.first(nat_index_array).get("data");
-        StatBar.drawVisualization('graph_div', data_hash);
+        setTimeout(function(){
+          StatBar.drawVisualization('graph_div', data_hash);
+        },500);
       }
     });
     google.maps.event.addListener(polygon, "mouseout", function(event){
