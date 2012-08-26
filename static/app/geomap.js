@@ -25,6 +25,10 @@ $(document).ready(function(){
 
   var button_events = {"poverty_button":"Poverty Alleviation", "economic_button":"Economic Equality", "infrastructure_button":"Infrastructure Index", "human_rights_button":"Human Rights Index", "government_button":"Government Legitmacy", "literacy_button":"Literacy Rate"}
   _.each(button_events, function(statistic_name,button_id){ 
+    add_click_event_to_buttons(statistic_name, button_id);
+  });
+
+  var add_click_event_to_buttons = function(statistic_name, button_id){
     $("#"+button_id).on('click', function(){
       console.log($('.btn-group').find('.btn'));
       $('.btn-group').find('.btn').removeClass('selected');
@@ -32,7 +36,8 @@ $(document).ready(function(){
       GeoMap.setup_map();
       GeoMap.set_map_statistics(GeoMap.geo_boundaries, GeoMap.geo_data, statistic_name);
     });
-  });
+    
+  };
 
   var GeoCoordinates= Backbone.Model.extend({});
   var GeoCoordinatesCollection = Backbone.Collection.extend({
@@ -56,13 +61,14 @@ $(document).ready(function(){
       
       var country_data = geo_data.where({'country': country.get('country')})
       if(country_data.length > 0){
-        var opacity =  _.first(country_data).get("data")[data_type]/100.0;
+        var data_number = _.first(country_data).get("data")[data_type]
+        var opacity =  data_number/100.0;
       }
       else{
         var opacity = 0;
       }
 
-      boundaries.push({country: country.get('country'), coordinates: country.get('coordinates'), type: country.get('type'), opacity: opacity});
+      boundaries.push({country: country.get('country'), coordinates: country.get('coordinates'), type: country.get('type'), opacity: opacity, data_type: data_type, data_number: data_number});
     });
     _.each(boundaries, function(boundary){ 
       var multipolygon = false;
@@ -78,7 +84,7 @@ $(document).ready(function(){
             if(boundary['country']!='Antarctica')
             coordinates.push(new google.maps.LatLng(b[1],b[0]));
           });
-          GeoMap.plot_points(coordinates, opacity);
+          GeoMap.plot_points(coordinates, opacity, boundary);
         });
       }
       else{
@@ -86,12 +92,12 @@ $(document).ready(function(){
         _.each(bounds[0], function(bound){
           coordinates.push(new google.maps.LatLng(bound[1],bound[0]));
         });
-        GeoMap.plot_points(coordinates, opacity);
+        GeoMap.plot_points(coordinates, opacity, boundary);
       }
     });
-  }
-  GeoMap.plot_points = function(points, opacity){
-    var testBoundary = new google.maps.Polygon({
+  };
+  GeoMap.plot_points = function(points, opacity, plot_info){
+    var polygon = new google.maps.Polygon({
       paths: points,
       strokeColor : "#003333",
       strokeOpacity: 0.8,
@@ -99,6 +105,18 @@ $(document).ready(function(){
       fillColor: "#003333",
       fillOpacity: opacity
     });
-    testBoundary.setMap(GeoMap.map);
-  }
+    GeoMap.add_polygon_listeners(polygon, plot_info);
+    polygon.setMap(GeoMap.map);
+  };
+  GeoMap.add_polygon_listeners = function(polygon, plot_info){
+    var infowindow = new google.maps.InfoWindow({
+      content: "This is the content for: "+ plot_info['country']
+    });    
+    google.maps.event.addListener(polygon, "mouseover", function(event){
+      infowindow.open(GeoMap.map, event.latLng);
+    });
+    google.maps.event.addListener(polygon, "mouseout", function(event){
+      infowindow.close();
+    });
+  };
 })();
