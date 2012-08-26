@@ -18,7 +18,7 @@ console.log(data_array);
     var min = 0;
     var max = 100;
     options.chds = min + ',' + max;
-    options.chs = '200x75';
+    options.chs = '300x75';
     
     var suffix = '';
     var color = 'ff3399'
