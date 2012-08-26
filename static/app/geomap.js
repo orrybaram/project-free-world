@@ -4,7 +4,7 @@ if(typeof GeoMap === 'undefined' || GeoMap === null){
 };
 
 $(document).ready(function(){
-  mapOptions = {zoom: 1, center: new google.maps.LatLng(0,0), mapTypeId: google.maps.MapTypeId.TERRAIN, mapTypeControl: true};
+  mapOptions = {zoom: 1, center: new google.maps.LatLng(0,0), mapTypeId: google.maps.MapTypeId.TERRAIN};
   GeoMap.map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
 });
 
