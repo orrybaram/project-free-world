@@ -3179,15 +3179,15 @@ header nav ul li.current {
   padding: 20px;
 }
 .sidebar #legend #gradient-bar {
-  background-color: #091847;
-  background-image: -moz-linear-gradient(left, rgba(255, 255, 255, 0.9), #091847);
-  background-image: -ms-linear-gradient(left, rgba(255, 255, 255, 0.9), #091847);
-  background-image: -webkit-gradient(linear, 0 0, 100% 0, from(rgba(255, 255, 255, 0.9)), to(#091847));
-  background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.9), #091847);
-  background-image: -o-linear-gradient(left, rgba(255, 255, 255, 0.9), #091847);
-  background-image: linear-gradient(left, rgba(255, 255, 255, 0.9), #091847);
+  background-color: #094738;
+  background-image: -moz-linear-gradient(left, rgba(255, 255, 255, 0.9), #094738);
+  background-image: -ms-linear-gradient(left, rgba(255, 255, 255, 0.9), #094738);
+  background-image: -webkit-gradient(linear, 0 0, 100% 0, from(rgba(255, 255, 255, 0.9)), to(#094738));
+  background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.9), #094738);
+  background-image: -o-linear-gradient(left, rgba(255, 255, 255, 0.9), #094738);
+  background-image: linear-gradient(left, rgba(255, 255, 255, 0.9), #094738);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='rgba(255, 255, 255, 0.9)', endColorstr='#091847', GradientType=1);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='rgba(255, 255, 255, 0.9)', endColorstr='#094738', GradientType=1);
   height: 20px;
   width: 100%;
   border-radius: 5px;
