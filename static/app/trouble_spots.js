@@ -331,7 +331,6 @@ TS.choose_type = function(type){
     var country_name = TS[type][i]['country']
     var latlng_array = TS[type][i]['LatLng'];
     $('#troublespot'+i).html(country_name);
-    $('#troublespot'+i).off('click');
     $('#troublespot'+i).on('click', function(){
 console.log(latlng_array);
       var map = GeoMap.map; 
