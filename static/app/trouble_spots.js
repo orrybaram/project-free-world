@@ -320,7 +320,7 @@ TS.setup_click_handlers = function(){
   });
 }
 
-TS.add_click_event_to_buttons(statistics_type, button_id){
+TS.add_click_event_to_buttons = function(statistics_type, button_id){
   $('#'+button_id).on('click', function(){
     TS.choose_type(statistics_type);
   });
