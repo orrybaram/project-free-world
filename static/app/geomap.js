@@ -37,13 +37,13 @@ $(document).ready(function(){
       }
       bounds = boundary['coordinates'];
       if(multipolygon == true){
-        console.log(boundary['country']);
         _.each(bounds, function(bound){
-            var coordinates = [];
-            _.each(bound, function(b){
-              coordinates.push(new google.maps.LatLng(b[1],b[0]));
-            });
-            GeoMap.plot_points(coordinates);
+          console.log(boundary['country']);
+          var coordinates = [];
+          _.each(bound, function(b){
+            coordinates.push(new google.maps.LatLng(b[1],b[0]));
+          });
+          GeoMap.plot_points(coordinates);
         });
       }
       else{
