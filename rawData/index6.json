@@ -1,140 +1,149 @@
 [
 	{
 		"Countries by Continent": "Mali",
-		"Capital City": "Bamako",
-		"Literacy Rate": "26",
+		"LatLng": [17,-4], 
+		"Type": 	"Literacy Rate", 
+		"Value": "26",
 		"Lat": "12°34'N",
 		"Lng": "07°55'W"
 	},
 	{
 		"Countries by Continent": "South Sudan",
-		"Capital City": "Juba",
-		"Literacy Rate": "27",
+		"LatLng": [5.88, 31.28], 
+		"Type": 		"Literacy Rate",
+		 "Value": "27",
 		"Lat": "#N/A",
 		"Lng": "#N/A"
 	},
 	{
 		"Countries by Continent": "Sudan",
-		"Capital City": "Khartoum",
-		"Literacy Rate": "27",
+		"LatLng": [15,30],
+		"Type": 		"Literacy Rate",
+		"Value": "27",
 		"Lat": "15°31'N",
 		"Lng": "32°35'E"
 	},
 	{
 		"Countries by Continent": "Ethiopia",
-		"Capital City": "Addis Abada",
-		"Literacy Rate": "28",
+		"LatLng": [8,38], 
+		"Type":  "Literacy Rate", 
+		"Value": "28",
 		"Lat": "09°02'N",
 		"Lng": "38°42'E"
 	},
 	{
 		"Countries by Continent": "Burkina Faso",
-		"Capital City": "Ouagadougou",
-		"Literacy Rate": "29",
+		"LatLng": [13,-2], 
+		"Type":  "Literacy Rate", 
+		"Value": "29",
 		"Lat": "12°15'N",
 		"Lng": "01°30'W"
 	},
 	{
 		"Countries by Continent": "Niger",
-		"Capital City": "Niamey",
-		"Literacy Rate": "29",
+		"LatLng": [16,8],
+		 "Type": 	"Literacy Rate", 
+		"Value": "29",
 		"Lat": "13°27'N",
 		"Lng": "02°06'E"
 	},
 	{
 		"Countries by Continent": "Chad",
-		"Capital City": "N'Djamena",
-		"Literacy Rate": "34",
+		"LatLng": [15,19],
+		"Type": "Literacy Rate", 
+		"Value": "34",
 		"Lat": "12°10'N",
 		"Lng": "14°59'E"
 	},
 	{
 		"Countries by Continent": "Somalia",
-		"Capital City": "Mogadishu",
-		"Literacy Rate": "36",
+		"LatLng": [10,49], 
+		"Type":  "Literacy Rate", 
+		"Value": "36",
 		"Lat": "02°02'N",
 		"Lng": "45°25'E"
 	},
 	{
 		"Countries by Continent": "Liberia",
-		"Capital City": "Monrovia",
-		"Literacy Rate": "38",
+		"LatLng": [6.5,-9.5], 
+		"Type": "Literacy Rate", 
+		"Value": "38",
 		"Lat": "06°18'N",
 		"Lng": "10°47'W"
 	},
 	{
 		"Countries by Continent": "Afghanistan",
-		"Capital City": "Kabul",
+		"LatLng": "Kabul",
 		"Literacy Rate": "38",
 		"Lat": "34°28'N",
 		"Lng": "69°11'E"
 	},
 	{
 		"Countries by Continent": "Guinea",
-		"Capital City": "Conakry",
+		"LatLng": "Conakry",
 		"Literacy Rate": "40",
 		"Lat": "09°29'N",
 		"Lng": "13°49'W"
 	},
 	{
 		"Countries by Continent": "Sierra Leone",
-		"Capital City": "Freetown",
+		"LatLng": "Freetown",
 		"Literacy Rate": "41",
 		"Lat": "08°30'N",
 		"Lng": "13°17'W"
 	},
 	{
 		"Countries by Continent": "Benin",
-		"Capital City": "Porto-Novo",
+		"LatLng": "Porto-Novo",
 		"Literacy Rate": "42",
 		"Lat": "06°23'N",
 		"Lng": "02°42'E"
 	},
 	{
 		"Countries by Continent": "Gambia",
-		"Capital City": "Banjul",
+		"LatLng": "Banjul",
 		"Literacy Rate": "47",
 		"Lat": "13°28'N",
 		"Lng": "16°40'W"
 	},
 	{
 		"Countries by Continent": "Senegal",
-		"Capital City": "Dakar",
+		"LatLng": "Dakar",
 		"Literacy Rate": "50",
 		"Lat": "14°34'N",
 		"Lng": "17°29'W"
 	},
 	{
 		"Countries by Continent": "East Timor",
-		"Capital City": "Dili",
+		"LatLng": "Dili",
 		"Literacy Rate": "50",
 		"Lat": "08°29'S",
 		"Lng": "125°34'E"
 	},
 	{
 		"Countries by Continent": "Gunea-Bissau",
-		"Capital City": "Bissau",
+		"LatLng": "Bissau",
 		"Literacy Rate": "52",
 		"Lat": "#N/A",
 		"Lng": "#N/A"
 	},
 	{
 		"Countries by Continent": "Togo",
-		"Capital City": "Lomé",
+		"LatLng": "Lomé",
 		"Literacy Rate": "53",
 		"Lat": "06°09'N",
 		"Lng": "01°20'E"
 	},
 	{
 		"Countries by Continent": "Bhutan",
-		"Capital City": "Thimphu",
+		"LatLng": "Thimphu",
 		"Literacy Rate": "53",
 		"Lat": "27°31'N",
 		"Lng": "89°45'E"
 	},
 	{
 		"Countries by Continent": "Central African Republic",
-		"Capital City": "Bangui",
+		"LatLng": "Bangui",
 		"Literacy Rate": "55",
 		"Lat": "04°23'N",
 		"Lng": "18°35'E"

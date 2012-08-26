@@ -11,22 +11,19 @@ if(typeof StatBar === 'undefined' || StatBar === null){
         data_array.push([key, parseInt(value)]);
       }
     }); 
-console.log(data_array);
     var google_data = google.visualization.arrayToDataTable(data_array);
     var options = {};
     options.cht = 'bhg';
-    var min = 0;
-    var max = 100;
-    options.chds = min + ',' + max;
-    options.chs = '125x75';
+    options.chs = '300x75';
     
     var suffix = '';
-    var color = 'ff3399'
+    var color = '003333'
     var index = 0;
     var allbars = -1;
-    var fontSize = 5;
+    var fontSize = 4;
     var priority = 0
-    options.chm = [suffix, color, index, allbars, fontSize, priority].join(',');
+    options.chm = [suffix, color, index, allbars, fontSize, priority].join(','); 
+    options.colors = ['#003333']
     new google.visualization.ImageChart(document
                                         .getElementById(div_id))
                                         .draw(google_data, options);
