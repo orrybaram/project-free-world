@@ -331,18 +331,14 @@ TS = {};
     for(var i = 0; i < 6; i++){
       var country_name = TS[type][i]['country']
       var latlng_array1 = TS[type][i]['LatLng'];
-      $('#troublespot'+i.toString()).html(country_name + '<div class="label danger">Critical</div>');
-      $('#troublespot'+i.toString()).off('click');
-      $('#troublespot'+i.toString()).on('click', function(){
-        var map = GeoMap.map; 
-      console.log(latlng_array1);
-        var marker_loc = new google.maps.LatLng(latlng_array1[0], latlng_array1[1]);
-        var marker = new google.maps.Marker({
-          position: marker_loc,
-          map: map,
-          title: country_name
-        });
+      var map = GeoMap.map; 
+      var marker_loc = new google.maps.LatLng(latlng_array1[0], latlng_array1[1]);
+      var marker = new google.maps.Marker({
+        position: marker_loc,
+        map: map,
+        title: country_name
       });
+      $('#troublespot'+i.toString()).html(country_name + '<div class="label danger">Critical</div>');
     }
   };
 })();
