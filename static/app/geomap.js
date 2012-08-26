@@ -40,7 +40,7 @@ $(document).ready(function(){
         _.each(bounds, function(bound){
           console.log(boundary['country']);
           var coordinates = [];
-          _.each(bound, function(b){
+          _.each(bound[0], function(b){
             coordinates.push(new google.maps.LatLng(b[1],b[0]));
           });
           GeoMap.plot_points(coordinates);
