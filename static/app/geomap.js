@@ -82,7 +82,7 @@ $(document).ready(function(){
       strokeColor : "#00FF00",
       strokeOpacity: 0.8,
       strokeWeight: 1,
-      fillColor: "#FF0000",
+      fillColor: "#00FF00",
       fillOpacity: opacity
     });
     testBoundary.setMap(GeoMap.map);
