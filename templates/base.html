@@ -11,19 +11,18 @@
 <body>
    <header>
     <div id="logo"> 
-      <div id="logo-title">project <strong>FREE</strong> world</div>
+      <div id="logo-title"><a href="/">project <strong>FREE</strong> world</a></div>
       <div id="logo-tagline">Food. Rights. Education. Environment</div>  
     </div>
     <nav>
       <ul>
-        <li><a href="/">Map</a></li>
-        <li><a href="/act">Act</a></li>
+        <li {% if title == 'Map'%} class="current"{% endif %}><a href="/">Map</a></li>
+        <li {% if title == 'Act'%} class="current"{% endif %}><a href="/act">Act</a></li>
       </ul>
     </nav>
   </header>
   
-{% block content %}
-{% endblock %}
+{% block content %}{% endblock %}
   
   <!-- JS -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>

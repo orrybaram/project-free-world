@@ -27,13 +27,12 @@ class Natindex(db.Model):
 
 @app.route('/')
 def index():
-    title = 'Map'
-    return render_template('index.html')
+    
+    return render_template('index.html', title = 'Map')
 
 @app.route('/act')
 def act():
-    context = {title: 'Act'}
-    return render_template('act.html', context)
+    return render_template('act.html', title = 'Act')
 
 @app.route('/natindex')
 def natindex():
@@ -56,10 +55,6 @@ def natindex():
 @app.route('/geomap')
 def geochart():
   return render_template('geomap.html')
-
-@app.route('/act')
-def act():
-  return render_template('act.html')
 
 if __name__ == '__main__':
     # Bind to PORT if defined, otherwise default to 5000.
