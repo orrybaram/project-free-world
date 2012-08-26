@@ -109,7 +109,7 @@ $(document).ready(function(){
   };
   GeoMap.add_polygon_listeners = function(polygon, plot_info){
     var infowindow = new google.maps.InfoWindow({
-      content: plot_info['country']+":<br/>"+plot_info['data_type']+": "+plot_info['data_number'],
+      content: plot_info['country']+":<br/>"+plot_info['data_type']+": "+plot_info['data_number'] + '<br/><div id = "graph_div"></div>',
       disableAutoPan: true
     });    
     google.maps.event.addListener(polygon, "mouseover", function(event){
