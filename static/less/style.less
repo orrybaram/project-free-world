@@ -138,6 +138,38 @@ header {
 	background-image: url(/static/images/noise.png);
 	border-right: 1px solid #A0A0A0;
 	
+	#legend {
+		padding:20px;
+
+		#gradient-bar {
+			#gradient.horizontal(rgba(255, 255, 255, 0.9), #091847);
+			height:20px;
+			width:100%;
+			border-radius: 5px;
+			margin: 10px 0;
+			border: 1px solid #AAA;
+			.box-shadow(0 1px #E0E0E0);
+		}
+		p {
+			font-size: 11px;
+			color: #636161;
+			text-shadow: 0 -1px #E7E7E7;
+		}
+	}
+
+	h2 {
+		font-size: 16px;
+		padding: 0 20px;
+		background-color: #F37158;
+		color: #9B0E0E;
+		text-shadow: 0 -1px #F59898;
+		border-top: 1px solid #FACACA;
+
+		i {
+			margin-right:10px;
+		}
+	}
+
 	ul {
 		padding: 0px;
 		margin:0px;
