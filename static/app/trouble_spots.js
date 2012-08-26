@@ -330,8 +330,9 @@ TS.choose_type = function(type){
   for(var i = 0; i < 6; i++){
     var country_name = TS[type][i]['country']
     var latlng_array = TS[type][i]['LatLng'];
-    $('#troublespot'+i).html(country_name);
-    $('#troublespot'+i).on('click', function(){
+    $('#troublespot'+i.toString()).html(country_name);
+    $('#troublespot'+i.toString()).off('click');
+    $('#troublespot'+i.toString()).on('click', function(){
 console.log(latlng_array);
       var map = GeoMap.map; 
       var marker_loc = new google.maps.LatLng(latlng_array[0], latlng_array[1]);
