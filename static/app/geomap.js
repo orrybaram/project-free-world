@@ -121,5 +121,11 @@ $(document).ready(function(){
       infowindow.close();
       polygon.setOptions({strokeWeight:0.5});
     });
+    google.maps.event.addListener(polygon, "click", function(event){
+      var polygon_center = polygon.getBounds().getCenter();
+      var polygon_zoom_level = GeoMap.map.getBoundsZoomLevel(polygon.getBounds());
+      GeoMap.map.setCenter(polygon_center);
+      GeoMap.map.setZoom(polygon_zoom_level);
+    });
   };
 })();
