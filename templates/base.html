@@ -16,8 +16,8 @@
     </div>
     <nav>
       <ul>
-        <li><a href="/">Map</a></li>
-        <li><a href="/act">Act</a></li>
+        <li {% if title == 'Map'%} class="current"{% endif %}><a href="/">Map</a></li>
+        <li {% if title == 'Act'%} class="current"{% endif %}><a href="/act">Act</a></li>
       </ul>
     </nav>
   </header>
