@@ -2717,18 +2717,20 @@ header #logo {
   height: 47px;
   display: inline-block;
 }
-header #logo #logo-title {
+header #logo #logo-title a {
   font-size: 25px;
   line-height: 30px;
   font-weight: 300;
+  color: #495543;
   -webkit-transition: color 0.4s linear;
   -moz-transition: color 0.4s linear;
   -ms-transition: color 0.4s linear;
   -o-transition: color 0.4s linear;
   transition: color 0.4s linear;
 }
-header #logo #logo-title:hover {
+header #logo #logo-title a:hover {
   color: #7CCC05;
+  text-decoration: none;
 }
 header #logo #logo-tagline {
   font-size: 10px;
@@ -2745,10 +2747,10 @@ header nav {
 }
 header nav ul {
   list-style: none;
+  margin-left: 35px;
 }
 header nav ul li {
   display: inline-block;
-  padding: 20px;
   border-right: 1px solid #F8F8F8;
   border-left: 1px solid #E6E3E3;
   margin: 0;
@@ -2759,9 +2761,12 @@ header nav ul li {
 header nav ul li a {
   text-decoration: none;
   color: gray;
+  display: inline-block;
+  padding: 20px;
 }
 header nav ul li a:hover {
   text-decoration: none;
+  color: black;
 }
 header nav ul li:hover {
   -moz-box-shadow: inset 0 0px 29px -15px #000000, transparent 0 0 0, transparent 0 0 0, transparent 0 0 0, transparent 0 0 0;
@@ -2859,9 +2864,9 @@ header nav ul li:hover {
   padding: 5px 20px;
   position: fixed;
   bottom: 0;
-  background-color: #99DD08;
+  background-color: #FF0843;
   width: 100%;
-  border-top: 1px solid #B9FFAB;
+  border-top: 1px solid #FF99BE;
   background-image: url(/static/images/noise.png);
   color: white;
   text-shadow: 0 -1px #48a50a;
@@ -2874,7 +2879,7 @@ header nav ul li:hover {
 }
 #act-now-footer:hover {
   text-decoration: none;
-  background: #99E739;
+  background-color: #FF0843;
 }
 footer {
   padding: 3px 20px;
