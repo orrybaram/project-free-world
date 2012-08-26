@@ -40,9 +40,9 @@ $(document).ready(function(){
         _.each(boundary, function(bound){
             var coordinates = []
             _.each(bound, function(b){
+              console.log(b[1]);
               coordinates.push(new google.maps.LatLng(b[1],b[0]));
             });
-            console.log(coordinates);
             GeoMap.plot_points(coordinates);
         });
       }
