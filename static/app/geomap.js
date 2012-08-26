@@ -26,8 +26,11 @@ $(document).ready(function(){
   GeoMap.geo_boundaries = new GeoCoordinatesCollection();
   GeoMap.geo_boundaries.fetch();
   GeoMap.geo_boundaries.on('reset', function(){
+    GeoMap.put_boundaries(self);
+  });
+  GeoMap.put_boundaries = function(geo_boundaries){
     var boundaries = [];
-    GeoMap.geo_boundaries.each(function(country){
+    geo_boundaries.each(function(country){
       boundaries.push({country: country.get('country'), coordinates: country.get('coordinates'), type: country.get('type')});
     });
     _.each(boundaries, function(boundary){ 
@@ -55,7 +58,7 @@ $(document).ready(function(){
         GeoMap.plot_points(coordinates);
       }
     });
-  });
+  }
   GeoMap.plot_points = function(points){
     testBoundary = new google.maps.Polygon({
       paths: points,
