@@ -25,10 +25,10 @@ $(document).ready(function(){
 
   var button_events = {"poverty_button":"Poverty Alleviation", "economic_button":"Economic Equality", "infrastructure_button":"Infrastructure Index", "human_rights_button":"Human Rights Index", "government_button":"Government Legitmacy", "literacy_button":"Literacy Rate"}
   _.each(button_events, function(statistic_name,button_id){ 
-    add_click_event_to_buttons(statistic_name, button_id);
+    GeoMap.add_click_event_to_buttons(statistic_name, button_id);
   });
 
-  var add_click_event_to_buttons = function(statistic_name, button_id){
+  Geomap.add_click_event_to_buttons = function(statistic_name, button_id){
     $("#"+button_id).on('click', function(){
       console.log($('.btn-group').find('.btn'));
       $('.btn-group').find('.btn').removeClass('selected');
