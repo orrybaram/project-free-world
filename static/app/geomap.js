@@ -35,10 +35,11 @@ $(document).ready(function(){
       if(boundary['type'] === 'MultiPolygon'){
         multipolygon = true;
       }
-      boundary = boundary['coordinates'];
+      bounds = boundary['coordinates'];
       if(multipolygon == true){
-        _.each(boundary, function(bound){
-            var coordinates = []
+        console.log(boundary['country']);
+        _.each(bounds, function(bound){
+            var coordinates = [];
             _.each(bound, function(b){
               coordinates.push(new google.maps.LatLng(b[1],b[0]));
             });
@@ -47,10 +48,10 @@ $(document).ready(function(){
       }
       else{
         var coordinates = []
-        _.each(boundary, function(bound){
-          //coordinates.push(new google.maps.LatLng(bound[1],bound[0]));
+        _.each(bounds, function(bound){
+          coordinates.push(new google.maps.LatLng(bound[1],bound[0]));
         });
-        //GeoMap.plot_points(coordinates);
+        GeoMap.plot_points(coordinates);
       }
     });
   });
