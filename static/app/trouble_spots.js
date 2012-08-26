@@ -310,6 +310,6 @@ TS.literacy = [
 $(document).ready(function(){
   for(var i = 0; i < 6; i++){
     console.log(TS['poverty'][i]['country']);
-    $('#troublestop'+i).html(TS['poverty'][i]['country']);
+    $('#troublespot'+i).html(TS['poverty'][i]['country']);
   }
 });
