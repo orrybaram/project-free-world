@@ -1,11 +1,5 @@
 TS = {};
 
-$(document).ready(function(){
-  var type = 'poverty';
-  for(var i = 1; i < 7; i++){
-    $('#troublestop'+i).html(TS[type][i]['country']);
-  }
-});
 
 TS.poverty = [
 	{
@@ -313,3 +307,9 @@ TS.literacy = [
 	}
 ]
 
+$(document).ready(function(){
+  var type = 'poverty';
+  for(var i = 1; i < 7; i++){
+    $('#troublestop'+i).html(TS[type][i]['country']);
+  }
+});
