@@ -42,7 +42,7 @@ $(document).ready(function(){
       
       var country_data = geo_data.where({'country': country.get('country')})
       if(country_data.length > 0){
-        var opacity =  country_data.first().get("data")[data_type]/100.0;
+        var opacity =  _.first(country_data).get("data")[data_type]/100.0;
       }
       else{
         var opacity = 0;
