@@ -1,8 +1,15 @@
 TS = {};
 
+$(document).ready(function(){
+  var type = 'poverty';
+  for(var i = 1; i < 7; i++){
+    $('#troublestop'+i).html(ts[type][i]['country']);
+  }
+});
+
 TS.poverty = [
 	{
-		"Countries by Continent": "Somalia",
+		"country": "Somalia",
 		"LatLng":[10,49], 
 		"Type": "Poverty Alleviation", 
 		"Value": "3",
@@ -10,7 +17,7 @@ TS.poverty = [
 		"Lng": "45°25'E"
 	},
 	{
-		"Countries by Continent": "Haiti",
+		"country": "Haiti",
 		"LatLng": [19,-72.4167], 
 		"Type": "Poverty Alleviation", 
 		"Value": "5",
@@ -18,7 +25,7 @@ TS.poverty = [
 		"Lng": "72°20'W"
 	},
 	{
-		"Countries by Continent": "Guinea-Bissau",
+		"country": "Guinea-Bissau",
 		"LatLng": [12,-15], 
 		"Type":	"Poverty Alleviation",
 		 "Value": "10",
@@ -26,7 +33,7 @@ TS.poverty = [
 		"Lng": "15°45'W"
 	},
 	{
-		"Countries by Continent": "Guinea",
+		"country": "Guinea",
 		"LatLng": [11,-10], 
 		"Type": 		"Poverty Alleviation",
 		 "Value": "11",
@@ -34,7 +41,7 @@ TS.poverty = [
 		"Lng": "13°49'W"
 	},
 	{
-		"Countries by Continent": "Zimbabwe",
+		"country": "Zimbabwe",
 		"LatLng": [-20,30],
 		 "Type": "Poverty Alleviation", 
 		"Value": "11",
@@ -42,7 +49,7 @@ TS.poverty = [
 		"Lng": "31°02'E"
 	},
 	{
-		"Countries by Continent": "Burundi",
+		"country": "Burundi",
 		"LatLng": [-3.5,30], 
 		"Type": "Poverty Alleviation",
 		 "Value": "12",
@@ -53,7 +60,7 @@ TS.poverty = [
 
 TS.economic= [
 	{
-		"Countries by Continent": "Angola",
+		"country": "Angola",
 		"LatLng": [-12.5,18.5], 
 		"Type":		"Economic Equality",
 		 "Value": "9",
@@ -61,7 +68,7 @@ TS.economic= [
 		"Lng": "13°15'E"
 	},
 	{
-		"Countries by Continent": "D R Congo",
+		"country": "D R Congo",
 		"LatLng": [0,25], 
 		"Type":		"Economic Equality",
 		 "Value": "11",
@@ -69,7 +76,7 @@ TS.economic= [
 		"Lng": "125°30'E"
 	},
 	{
-		"Countries by Continent": "Nigeria",
+		"country": "Nigeria",
 		"LatLng": [10,8], 
 		"Type":		"Economic Equality", 
 		"Value": "11",
@@ -77,7 +84,7 @@ TS.economic= [
 		"Lng": "07°32'E"
 	},
 	{
-		"Countries by Continent": "Zimbabwe",
+		"country": "Zimbabwe",
 		"LatLng": [-20,30], 
 		"Type":		"Economic Equality", 
 		"Value": "11",
@@ -85,7 +92,7 @@ TS.economic= [
 		"Lng": "31°02'E"
 	},
 	{
-		"Countries by Continent": "Equatorial Guinea",
+		"country": "Equatorial Guinea",
 		"LatLng": [2,10], 
 		"Type":		"Economic Equality", 
 		"Value": "12",
@@ -93,7 +100,7 @@ TS.economic= [
 		"Lng": "08°50'E"
 	},
 	{
-		"Countries by Continent": "South Sudan",
+		"country": "South Sudan",
 		"LatLng": [5.88, 31.28], 
 		"Type":	"Economic Equality", 
 		"Value": "12",
@@ -104,7 +111,7 @@ TS.economic= [
 
 TS.infrastructure= [
 	{
-		"Countries by Continent": "Somalia",
+		"country": "Somalia",
 		"LatLng": [10,49], 
 		"Type": 		"Infrastructure Index", 
 		"Value": "4",
@@ -112,7 +119,7 @@ TS.infrastructure= [
 		"Lng": "45°25'E"
 	},
 	{
-		"Countries by Continent": "D R Congo",
+		"country": "D R Congo",
 		"LatLng": [0,25], 
 		"Type": 		"Infrastructure Index", 
 		"Value": "9",
@@ -120,7 +127,7 @@ TS.infrastructure= [
 		"Lng": "125°30'E"
 	},
 	{
-		"Countries by Continent": "Chad",
+		"country": "Chad",
 		"LatLng": [15,19],
 		 "Type": 		"Infrastructure Index", 
 		 "Value": "10",
@@ -128,7 +135,7 @@ TS.infrastructure= [
 		"Lng": "14°59'E"
 	},
 	{
-		"Countries by Continent": "Zimbabwe",
+		"country": "Zimbabwe",
 		"LatLng": [-20,30], 
 		"Type":		"Infrastructure Index", 
 		"Value": "11",
@@ -136,7 +143,7 @@ TS.infrastructure= [
 		"Lng": "31°02'E"
 	},
 	{
-		"Countries by Continent": "Haiti",
+		"country": "Haiti",
 		"LatLng": [19,-72.4167], 
 		"Type":		"Infrastructure Index", 
 		"Value": "11",
@@ -144,7 +151,7 @@ TS.infrastructure= [
 		"Lng": "72°20'W"
 	},
 	{
-		"Countries by Continent": "South Sudan",
+		"country": "South Sudan",
 		"LatLng":  [5.88, 31.28],
 		 "Type":		"Infrastructure Index", 
 		"Value": "14",
@@ -155,7 +162,7 @@ TS.infrastructure= [
 
 TS.human = [
 	{
-		"Countries by Continent": "Somalia",
+		"country": "Somalia",
 		"LatLng":[10,49], 
 		"Type": 	"Human Rights Index", 
 		"Value": "2",
@@ -163,7 +170,7 @@ TS.human = [
 		"Lng": "45°25'E"
 	},
 	{
-		"Countries by Continent": "South Sudan",
+		"country": "South Sudan",
 		"LatLng": [5.88, 31.28], 
 		"Type":		"Human Rights Index", 
 		"Value": "4",
@@ -171,7 +178,7 @@ TS.human = [
 		"Lng": "#N/A"
 	},
 	{
-		"Countries by Continent": "D R Congo",
+		"country": "D R Congo",
 		"LatLng": [0,25],
 		 "Type":	"Human Rights Index", 
 		 "Value": "5",
@@ -179,7 +186,7 @@ TS.human = [
 		"Lng": "125°30'E"
 	},
 	{
-		"Countries by Continent": "Sudan",
+		"country": "Sudan",
 		"LatLng": [15,30],
 		 "Type": 		"Human Rights Index", 
 		 "Value": "6",
@@ -187,7 +194,7 @@ TS.human = [
 		"Lng": "32°35'E"
 	},
 	{
-		"Countries by Continent": "Syria",
+		"country": "Syria",
 		"LatLng": [35,38], 
 		"Type": 		"Human Rights Index", 
 		"Value": "7",
@@ -195,7 +202,7 @@ TS.human = [
 		"Lng": "#N/A"
 	},
 	{
-		"Countries by Continent": "Chad",
+		"country": "Chad",
 		"LatLng": [15,19], 
 		"Type": 		"Human Rights Index", 
 		"Value": "8",
@@ -206,7 +213,7 @@ TS.human = [
 
 TS.government = [
 	{
-		"Countries by Continent": "Somalia",
+		"country": "Somalia",
 		"LatLng": [10,49], 
 		"Type": 		"Government Legitimacy", 
 		"Value": "1",
@@ -214,7 +221,7 @@ TS.government = [
 		"Lng": "45°25'E"
 	},
 	{
-		"Countries by Continent": "South Sudan",
+		"country": "South Sudan",
 		"LatLng": [5.88, 31.28], 
 		"Type": 		"Government Legitimacy", 
 		"Value": "3",
@@ -222,7 +229,7 @@ TS.government = [
 		"Lng": "#N/A"
 	},
 	{
-		"Countries by Continent": "Afghanistan",
+		"country": "Afghanistan",
 		"LatLng": [33,65], 
 		"Type": 		"Government Legitimacy", 
 		"Value": "3",
@@ -230,7 +237,7 @@ TS.government = [
 		"Lng": "69°11'E"
 	},
 	{
-		"Countries by Continent": "D R Congo",
+		"country": "D R Congo",
 		"LatLng": [0,25], 
 		"Type": 		"Government Legitimacy", 
 		"Value": "4",
@@ -238,7 +245,7 @@ TS.government = [
 		"Lng": "125°30'E"
 	},
 	{
-		"Countries by Continent": "Ivory Coast",
+		"country": "Ivory Coast",
 		"LatLng": [8,-5], 
 		"Type": 		"Government Legitimacy", 
 		"Value": "4",
@@ -246,7 +253,7 @@ TS.government = [
 		"Lng": "#N/A"
 	},
 	{
-		"Countries by Continent": "Sudan",
+		"country": "Sudan",
 		"LatLng": [15,30], 
 		"Type": 		"Government Legitimacy", 
 		"Value": "4",
@@ -257,7 +264,7 @@ TS.government = [
 
 TS.literacy = [
 	{
-		"Countries by Continent": "Mali",
+		"country": "Mali",
 		"LatLng": [17,-4], 
 		"Type": 	"Literacy Rate", 
 		"Value": "26",
@@ -265,7 +272,7 @@ TS.literacy = [
 		"Lng": "07°55'W"
 	},
 	{
-		"Countries by Continent": "South Sudan",
+		"country": "South Sudan",
 		"LatLng": [5.88, 31.28], 
 		"Type": 		"Literacy Rate",
 		 "Value": "27",
@@ -273,7 +280,7 @@ TS.literacy = [
 		"Lng": "#N/A"
 	},
 	{
-		"Countries by Continent": "Sudan",
+		"country": "Sudan",
 		"LatLng": [15,30],
 		"Type": 		"Literacy Rate",
 		"Value": "27",
@@ -281,7 +288,7 @@ TS.literacy = [
 		"Lng": "32°35'E"
 	},
 	{
-		"Countries by Continent": "Ethiopia",
+		"country": "Ethiopia",
 		"LatLng": [8,38], 
 		"Type":  "Literacy Rate", 
 		"Value": "28",
@@ -289,7 +296,7 @@ TS.literacy = [
 		"Lng": "38°42'E"
 	},
 	{
-		"Countries by Continent": "Burkina Faso",
+		"country": "Burkina Faso",
 		"LatLng": [13,-2], 
 		"Type":  "Literacy Rate", 
 		"Value": "29",
@@ -297,7 +304,7 @@ TS.literacy = [
 		"Lng": "01°30'W"
 	},
 	{
-		"Countries by Continent": "Niger",
+		"country": "Niger",
 		"LatLng": [16,8],
 		 "Type": 	"Literacy Rate", 
 		"Value": "29",

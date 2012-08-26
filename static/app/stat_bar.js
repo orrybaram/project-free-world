@@ -11,7 +11,6 @@ if(typeof StatBar === 'undefined' || StatBar === null){
         data_array.push([key, parseInt(value)]);
       }
     }); 
-console.log(data_array);
     var google_data = google.visualization.arrayToDataTable(data_array);
     var options = {};
     options.cht = 'bhg';
