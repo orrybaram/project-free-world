@@ -4,11 +4,14 @@ if(typeof GeoMap === 'undefined' || GeoMap === null){
 };
 
 $(document).ready(function(){
-  mapOptions = {zoom: 3, center: new google.maps.LatLng(0,0), mapTypeId: google.maps.MapTypeId.TERRAIN};
-  GeoMap.map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
+  GeoMap.setup_map();
 });
 
 (function(){
+  GeoMap.setup_map = function(){
+    mapOptions = {zoom: 3, center: new google.maps.LatLng(0,0), mapTypeId: google.maps.MapTypeId.TERRAIN};
+    GeoMap.map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
+  };
   var GeoData = Backbone.Model.extend({});
   var GeoDataCollection = Backbone.Collection.extend({
     model: GeoData,
@@ -21,14 +24,13 @@ $(document).ready(function(){
   });
 
   var button_events = {"poverty_button":"Poverty Alleviation", "economic_button":"Economic Equality", "infrastructure_button":"Infrastructure Index", "human_rights_button":"Human Rights Index", "government_button":"Government Legitmacy", "literacy_button":"Literacy Rate"}
-  _.each(button_events, function(v,k){ 
-    $("#"+k).on('click', function(){
+  _.each(button_events, function(statistic_name,button_id){ 
+    $("#"+button_id).on('click', function(){
       console.log($('.btn-group').find('.btn'));
       $('.btn-group').find('.btn').removeClass('selected');
       $(this).addClass('selected');
-      mapOptions = {zoom: 3, center: new google.maps.LatLng(0,0), mapTypeId: google.maps.MapTypeId.TERRAIN};
-      GeoMap.map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
-      GeoMap.put_boundaries(GeoMap.geo_boundaries, GeoMap.geo_data, v);
+      GeoMap.setup_map();
+      GeoMap.set_map_statistics(GeoMap.geo_boundaries, GeoMap.geo_data, statistic_name);
     });
   });
 
@@ -40,9 +42,9 @@ $(document).ready(function(){
 
   GeoMap.geo_boundaries = new GeoCoordinatesCollection();
   GeoMap.geo_boundaries.on('reset', function(){
-    GeoMap.put_boundaries(GeoMap.geo_boundaries, GeoMap.geo_data, 'Economic Equality');
+    GeoMap.set_map_statistics(GeoMap.geo_boundaries, GeoMap.geo_data, 'Economic Equality');
   });
-  GeoMap.put_boundaries = function(geo_boundaries, geo_data, data_type){
+  GeoMap.set_map_statistics = function(geo_boundaries, geo_data, data_type){
     var stat = geo_data.map(function(data){
       return parseInt(data.get("data")[data_type]);
     });
@@ -63,7 +65,7 @@ $(document).ready(function(){
       boundaries.push({country: country.get('country'), coordinates: country.get('coordinates'), type: country.get('type'), opacity: opacity});
     });
     _.each(boundaries, function(boundary){ 
-      multipolygon = false;
+      var multipolygon = false;
       if(boundary['type'] === 'MultiPolygon'){
         multipolygon = true;
       }
@@ -89,7 +91,7 @@ $(document).ready(function(){
     });
   }
   GeoMap.plot_points = function(points, opacity){
-    testBoundary = new google.maps.Polygon({
+    var testBoundary = new google.maps.Polygon({
       paths: points,
       strokeColor : "#003333",
       strokeOpacity: 0.8,
